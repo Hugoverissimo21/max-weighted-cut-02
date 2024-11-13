@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.20)  8 NOV 2024 22:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.20)  13 NOV 2024 12:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/hugover/Desktop/AA proj01/revdetua/report.tex"
-(/Users/hugover/Desktop/AA proj01/revdetua/report.tex
+**/Users/hugover/Desktop/AA02/revdetua/report.tex
+(/Users/hugover/Desktop/AA02/revdetua/report.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
 (./revdetua.cls
@@ -240,8 +240,139 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Underfull \hbox (badness 2495) in paragraph at lines 46--48
+Underfull \hbox (badness 2495) in paragraph at lines 47--49
 []\OT1/cmr/bx/it/9 Resumo \OT1/cmr/bx/n/9 -- Este re-lat^^Sorio apre-senta a im-ple-
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 88
+\OT1/cmr/m/n/8 1:
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 88.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
+
+Underfull \hbox (badness 10000) detected at line 89
+\OT1/cmr/m/n/8 2:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 90
+\OT1/cmr/m/n/8 3:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 93
+\OT1/cmr/m/n/8 4:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 94
+\OT1/cmr/m/n/8 5:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 95
+\OT1/cmr/m/n/8 6:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 96
+\OT1/cmr/m/n/8 7:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 97
+\OT1/cmr/m/n/8 8:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 99
+\OT1/cmr/m/n/8 9:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 100
+\OT1/cmr/m/n/8 10:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 103
+\OT1/cmr/m/n/8 11:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 104
+\OT1/cmr/m/n/8 12:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 105
+\OT1/cmr/m/n/8 13:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 106
+\OT1/cmr/m/n/8 14:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 107
+\OT1/cmr/m/n/8 15:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 108
+\OT1/cmr/m/n/8 16:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 109
+\OT1/cmr/m/n/8 17:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 111
+\OT1/cmr/m/n/8 18:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 112
+\OT1/cmr/m/n/8 19:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 113
+\OT1/cmr/m/n/8 20:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 114
+\OT1/cmr/m/n/8 21:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 115
+\OT1/cmr/m/n/8 22:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 116
+\OT1/cmr/m/n/8 23:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 117
+\OT1/cmr/m/n/8 24:
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 118
+\OT1/cmr/m/n/8 25:
  []
 
 
@@ -249,11 +380,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-<../assets/problem.png, id=1, 556.0775pt x 339.2675pt>
-File: ../assets/problem.png Graphic file (type png)
-<use ../assets/problem.png>
-Package pdftex.def Info: ../assets/problem.png  used on input line 69.
-(pdftex.def)             Requested size: 173.28029pt x 105.72057pt.
 
 
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -261,381 +387,11 @@ Non-PDF special ignored!
 <special> ! userdict begin /bop-hook { 595 0 translate -1 1 scale } def end
 
 
- <../assets/problem.png>]
-<../assets/exampGraph.png, id=25, 289.08pt x 433.62pt>
-File: ../assets/exampGraph.png Graphic file (type png)
-<use ../assets/exampGraph.png>
-Package pdftex.def Info: ../assets/exampGraph.png  used on input line 94.
-(pdftex.def)             Requested size: 198.02815pt x 297.04114pt.
+] (./report.bbl)
 
-Underfull \hbox (badness 2088) in paragraph at lines 104--105
-[]\OT1/cmr/m/n/10 Este al-go-ritmo pode ser re-pre-sen-tado em pseu-
- []
 
 
-Underfull \hbox (badness 10000) detected at line 113
-\OT1/cmr/m/n/8 1:
- []
-
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 113.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
-
-Underfull \hbox (badness 10000) detected at line 114
-\OT1/cmr/m/n/8 2:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 115
-\OT1/cmr/m/n/8 3:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 118
-\OT1/cmr/m/n/8 4:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 119
-\OT1/cmr/m/n/8 5:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 120
-\OT1/cmr/m/n/8 6:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 121
-\OT1/cmr/m/n/8 7:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 122
-\OT1/cmr/m/n/8 8:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 124
-\OT1/cmr/m/n/8 9:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 125
-\OT1/cmr/m/n/8 10:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 128
-\OT1/cmr/m/n/8 11:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 129
-\OT1/cmr/m/n/8 12:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 130
-\OT1/cmr/m/n/8 13:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 131
-\OT1/cmr/m/n/8 14:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 132
-\OT1/cmr/m/n/8 15:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 133
-\OT1/cmr/m/n/8 16:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 134
-\OT1/cmr/m/n/8 17:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 136
-\OT1/cmr/m/n/8 18:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 137
-\OT1/cmr/m/n/8 19:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 138
-\OT1/cmr/m/n/8 20:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 139
-\OT1/cmr/m/n/8 21:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 140
-\OT1/cmr/m/n/8 22:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 141
-\OT1/cmr/m/n/8 23:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 142
-\OT1/cmr/m/n/8 24:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 143
-\OT1/cmr/m/n/8 25:
- []
-
-
-
-
-Underfull \hbox (badness 1062) in paragraph at lines 155--156
-[]\OT1/cmr/m/n/10 Atendendo ao al-go-ritmo de pes-quisa gu-losa com
- []
-
-
-Underfull \hbox (badness 10000) detected at line 167
-\OT1/cmr/m/n/8 1:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 170
-\OT1/cmr/m/n/8 2:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 171
-\OT1/cmr/m/n/8 3:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 172
-\OT1/cmr/m/n/8 4:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 173
-\OT1/cmr/m/n/8 5:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 174
-\OT1/cmr/m/n/8 6:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 175
-\OT1/cmr/m/n/8 7:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 176
-\OT1/cmr/m/n/8 8:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 178
-\OT1/cmr/m/n/8 9:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 181
-\OT1/cmr/m/n/8 10:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 182
-\OT1/cmr/m/n/8 11:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 183
-\OT1/cmr/m/n/8 12:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 184
-\OT1/cmr/m/n/8 13:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 185
-\OT1/cmr/m/n/8 14:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 186
-\OT1/cmr/m/n/8 15:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 187
-\OT1/cmr/m/n/8 16:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 188
-\OT1/cmr/m/n/8 17:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 189
-\OT1/cmr/m/n/8 18:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 190
-\OT1/cmr/m/n/8 19:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 191
-\OT1/cmr/m/n/8 20:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 192
-\OT1/cmr/m/n/8 21:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 193
-\OT1/cmr/m/n/8 22:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 194
-\OT1/cmr/m/n/8 23:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 195
-\OT1/cmr/m/n/8 24:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 196
-\OT1/cmr/m/n/8 25:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 197
-\OT1/cmr/m/n/8 26:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 198
-\OT1/cmr/m/n/8 27:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 199
-\OT1/cmr/m/n/8 28:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 200
-\OT1/cmr/m/n/8 29:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 201
-\OT1/cmr/m/n/8 30:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 202
-\OT1/cmr/m/n/8 31:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 203
-\OT1/cmr/m/n/8 32:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 204
-\OT1/cmr/m/n/8 33:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 206
-\OT1/cmr/m/n/8 34:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 207
-\OT1/cmr/m/n/8 35:
- []
-
-
-Underfull \hbox (badness 10000) detected at line 209
-\OT1/cmr/m/n/8 36:
- []
-
-
-
-[2 <../assets/exampGraph.png>]
-
-<../assets/numberOPS.png, id=32, 349.7868pt x 277.5168pt>
-File: ../assets/numberOPS.png Graphic file (type png)
-<use ../assets/numberOPS.png>
-Package pdftex.def Info: ../assets/numberOPS.png  used on input line 234.
-(pdftex.def)             Requested size: 198.02815pt x 157.11487pt.
-
-Underfull \hbox (badness 2173) in paragraph at lines 241--242
-\OML/cmm/m/it/10 n[]\OT1/cmr/m/n/10 )$, para o al-go-ritmo de pes-quisa exaus-tiva, e
- []
-
-
-
-[3 <../assets/numberOPS.png>]
-<../assets/execTIME.png, id=37, 349.7868pt x 277.5168pt>
-File: ../assets/execTIME.png Graphic file (type png)
-<use ../assets/execTIME.png>
-Package pdftex.def Info: ../assets/execTIME.png  used on input line 256.
-(pdftex.def)             Requested size: 198.02815pt x 157.11487pt.
-
-
-
-
-[4 <../assets/execTIME.png>]
-<../assets/precHEU.png, id=42, 348.1808pt x 277.5168pt>
-File: ../assets/precHEU.png Graphic file (type png)
-<use ../assets/precHEU.png>
-Package pdftex.def Info: ../assets/precHEU.png  used on input line 291.
-(pdftex.def)             Requested size: 198.02815pt x 157.83897pt.
-
-
-
-Underfull \hbox (badness 1342) in paragraph at lines 304--305
-\OT1/cmr/m/n/10 aplica^^Xc~ao des-tas abor-da-gens, nota-se que o al-go-
- []
-
-(./report.bbl
-
-[5 <../assets/precHEU.png>])
-
-
-
-[6
+[2
 
 ] (./report.aux)
  ***********
@@ -644,18 +400,18 @@ L3 programming layer <2024-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5542 strings out of 473579
- 94712 string characters out of 5728228
- 1952957 words of memory out of 5000000
- 28386 multiletter control sequences out of 15000+600000
- 564979 words of font info for 60 fonts, out of 8000000 for 9000
+ 5477 strings out of 473579
+ 93197 string characters out of 5728228
+ 1942957 words of memory out of 5000000
+ 28322 multiletter control sequences out of 15000+600000
+ 564811 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,22n,66p,838b,411s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (6 pages, 2068442 bytes).
+ 57i,9n,66p,321b,413s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on report.pdf (2 pages, 184563 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
