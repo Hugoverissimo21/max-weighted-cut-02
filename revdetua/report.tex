@@ -76,8 +76,6 @@ Graphs for the Computational Experiments: mine and elearnig ou links and gset
 
 - quando é q o algortimo para?
 
-% algortimo de pesquisa exuastiva so apra referencia
-
 
 
 
@@ -85,34 +83,33 @@ Graphs for the Computational Experiments: mine and elearnig ou links and gset
 
 \begin{algorithm}[H]
 \raggedright
-\textbf{Entrada:} matriz de adjacência \textit{G} \\
+\textbf{Entrada:} SHDIASHDIUA \\
 \textbf{Saída:} subconjuntos \textit{S} e \textit{T}, peso do corte \textit{weight} \\
 \hrule 
-\caption{nome do algorimtooo}
+\caption{NOME DO ALGORTIMO}
 \begin{algorithmic}[1]
     \State \texttt{best\_solution} $\gets$ \texttt{None}
-    \State \texttt{best\_cut\_weight} $\gets$ 0
+    \State \texttt{weight} $\gets$ 0
     \State \texttt{seen\_solutions} $\gets$ empty set
-
     \For{$i \gets 1$ \textbf{to} \texttt{solutions}}
-        \State Generate a random partition \texttt{partition}
-        \If {\texttt{size(seen\_solutions)} $=$ $2^{\texttt{n\_nodes}}$}
+        \State \texttt{partition} $\gets$ random partition of the nodes
+        \If {\texttt{length}(\texttt{seen\_solutions}) $=$ $2^{\texttt{n\_nodes}}$}
             \State \textbf{break}
         \EndIf
-        \State Compute a hash of the partition, \texttt{partition\_hash}
+        \State \texttt{partition\_hash} $\gets$ hash the partition
         \If {\texttt{partition\_hash} $\in$ \texttt{seen\_solutions}}
             \State \textbf{continue}
         \EndIf
         \State Add \texttt{partition\_hash} to \texttt{seen\_solutions}
-        \State \texttt{new\_cut\_weight} $\gets$ sum of weights of edges where nodes are in different parts of the partition
-        \If {\texttt{new\_cut\_weight} $>$ \texttt{best\_cut\_weight}}
-            \State \texttt{best\_cut\_weight} $\gets$ \texttt{new\_cut\_weight}
+        \State \texttt{new\_cut\_weight} $\gets$ compute the cut weight
+        \If {\texttt{new\_cut\_weight} $>$ \texttt{weight}}
+            \State \texttt{weight} $\gets$ \texttt{new\_cut\_weight}
             \State \texttt{best\_solution} $\gets$ copy of \texttt{partition}
         \EndIf
     \EndFor
     \State \texttt{S} $\gets$ set of nodes assigned to $0$ in \texttt{best\_solution}
     \State \texttt{T} $\gets$ set of nodes assigned to $1$ in \texttt{best\_solution}
-    \Return \texttt{S}, \texttt{T}, \texttt{best\_cut\_weight}
+    \Return \texttt{S}, \texttt{T}, \texttt{weight}
 \end{algorithmic}
 \end{algorithm}
     
