@@ -83,8 +83,14 @@ Graphs for the Computational Experiments: mine and elearnig ou links and gset
 
 \begin{algorithm}[H]
 \raggedright
-\textbf{Entrada:} SHDIASHDIUA \\
-\textbf{Saída:} subconjuntos \textit{S} e \textit{T}, peso do corte \textit{weight} \\
+\textbf{Entrada:}
+
+- lista de arestas e os seus pesos (\textit{edges})
+
+- número de vértices (\textit{n\_nodes})
+
+- número de soluções a gerar (\textit{solutions})\\
+\textbf{Saída:} subconjuntos \textit{S} e \textit{T}, peso do corte (\textit{weight}) \\
 \hrule 
 \caption{NOME DO ALGORTIMO}
 \begin{algorithmic}[1]
@@ -123,46 +129,41 @@ dsadasd
 
 \begin{algorithm}[H]
 \raggedright
-\textbf{Entrada:} matriz de adjacência \textit{G} \\
-\textbf{Saída:} subconjuntos \textit{S} e \textit{T}, peso do corte \textit{weight} \\
+\textbf{Entrada:}
+
+- lista de arestas e os seus pesos (\textit{edges})
+
+- temperatura (\textit{Temp})
+
+- taxa de arrefecimento (\textit{cooling\_rate})\\
+\textbf{Saída:} subconjuntos \textit{S} e \textit{T}, peso do corte (\textit{best\_cut}) \\
 \hrule 
-\caption{Simulated Annealing for Graph Partitioning}
+\caption{\textit{Simulated Annealing}}
 \begin{algorithmic}[1]
-
-    \Require List of edges \texttt{edges}, number of nodes \texttt{n\_nodes}, initial temperature \texttt{initial\_temp}, cooling rate \texttt{cooling\_rate}, minimum temperature \texttt{min\_temp}
-    \Ensure Partition sets \texttt{S} and \texttt{T}, and maximum cut weight \texttt{best\_cut}
-
-
-    \While{\texttt{temperature} \ensuremath{>} \texttt{min\_temp}}
-        \State \texttt{node} $\gets$ Randomly select a node from \texttt{nodes}
+    \State \texttt{partition} $\gets$ random partition of the nodes
+    \State \texttt{best\_partition} $\gets$ \texttt{partition}
+    \State \texttt{current\_cut} $\gets$ compute the cut weight
+    \State \texttt{best\_cut} $\gets$ \texttt{current\_cut}
+    \While{\texttt{Temp} \ensuremath{>} \ensuremath{10^{-3}}}
+        \State \texttt{node} $\gets$ randomly select a node
         \State Flip the partition of \texttt{node} in \texttt{partition}
-        \State \texttt{new\_cut} $\gets$ Compute weight of edges crossing the new partition
+        \State \texttt{new\_cut} $\gets$ compute the new cut weight
         \State \texttt{cost\_diff} $\gets$ \texttt{new\_cut} $-$ \texttt{current\_cut}
-        \If{\texttt{cost\_diff} \ensuremath{>} 0 \textbf{or} Random number \ensuremath{<} \ensuremath{\exp(\texttt{cost\_diff} / \texttt{temperature})}}
-            \State Accept the move
+        \If{\texttt{cost\_diff} \ensuremath{>} 0 \textbf{or} random number $\in$ [0, 1] \ensuremath{<} $e^{\ensuremath{\texttt{cost\_diff} / \texttt{Temp}}}}$
+            \Comment Accept the move
             \State \texttt{current\_cut} $\gets$ \texttt{new\_cut}
             \If{\texttt{new\_cut} \ensuremath{>} \texttt{best\_cut}}
                 \State \texttt{best\_cut} $\gets$ \texttt{new\_cut}
                 \State \texttt{best\_partition} $\gets$ \texttt{partition}
             \EndIf
         \Else
-            \State Reject the move \\
-            \State and revert the partition change
+            \Comment Reject the move
+            \State Revert the partition of \texttt{node} in \texttt{partition}
         \EndIf
-        
-        
-        \State \texttt{temperature} $\gets$ \texttt{temperature} \ensuremath{\times} \texttt{cooling\_rate}
+        \State \texttt{Temp} $\gets$ \texttt{Temp} \ensuremath{\times} \texttt{cooling\_rate}
     \EndWhile
-
-    \State \texttt{nodes} $\gets$ \texttt{range(n\_nodes)}
-    \State \texttt{partition} $\gets$ Random assignment of each node to $0$ or $1$
-    \State \texttt{current\_cut} $\gets$ Compute weight of edges crossing the partition
-    \State \texttt{temperature} $\gets$ \texttt{initial\_temp}
-    \State \texttt{best\_partition} $\gets$ \texttt{partition}
-    \State \texttt{best\_cut} $\gets$ \texttt{current\_cut}
-
-    \State \texttt{S} $\gets$ Set of nodes assigned to $0$ in \texttt{best\_partition}
-    \State \texttt{T} $\gets$ Set of nodes assigned to $1$ in \texttt{best\_partition}
+    \State \texttt{S} $\gets$ set of nodes assigned to $0$ in \texttt{best\_partition}
+    \State \texttt{T} $\gets$ set of nodes assigned to $1$ in \texttt{best\_partition} \\
     \Return \texttt{S}, \texttt{T}, \texttt{best\_cut}
 \end{algorithmic}
 \end{algorithm}
@@ -186,32 +187,34 @@ dsadasd
 
 \begin{algorithm}[H]
 \raggedright
-\textbf{Entrada:} matriz de adjacência \textit{G} \\
-\textbf{Saída:} subconjuntos \textit{S} e \textit{T}, peso do corte \textit{weight} \\
-\hrule 
-\caption{Random Greedy Optimization for Max Weight Cut}
-\begin{algorithmic}[1]
-    \Require List of edges \texttt{edges}, number of nodes \texttt{n\_nodes}, iteration limit factor \texttt{itLim}
-    \Ensure Partition sets \texttt{S} and \texttt{T}, and maximum cut weight \texttt{cut\_weight}
+\textbf{Entrada:}
 
-    \State \texttt{partition} $\gets$ Random assignment of each node to $0$ or $1$
-    \State \texttt{cut\_weight} $\gets$ Compute weight of edges crossing the partition
+- lista de arestas e os seus pesos (\textit{edges})
+
+- número de vértices (\textit{n\_nodes})
+
+- fator de ajuste do máximo de iterações (\textit{itLim})\\
+\textbf{Saída:} subconjuntos \textit{S} e \textit{T}, peso do corte (\textit{weight}) \\
+\hrule 
+\caption{NOME DO ALGORTIMO}
+\begin{algorithmic}[1]
+    \State \texttt{partition} $\gets$ random partition of the nodes
+    \State \texttt{cut\_weight} $\gets$ compute the cut weight
     \State \texttt{improved} $\gets$ \texttt{True}
     \State \texttt{it\_limit} $\gets$ \texttt{len(edges)} \ensuremath{\times} \texttt{itLim}
 
     \While{\texttt{improved} \textbf{and} \texttt{it\_limit} \ensuremath{>} 0}
-        \State \texttt{it\_limit} $\gets$ \texttt{it\_limit} $- 1$
+        \State \texttt{it\_limit} $\gets$ \texttt{it\_limit} $ - 1$
         \State \texttt{improved} $\gets$ \texttt{False}
-        \For{\texttt{node} \textbf{in} \texttt{range(n\_nodes)}}
-            \State Flip the partition of \texttt{node}
-            \State \texttt{new\_cut\_weight} $\gets$ Compute weight of edges crossing the partition
+        \For{\texttt{node} \textbf{in} \texttt{range}(\texttt{n\_nodes})}
+            \State Flip the partition of \texttt{node} in \texttt{partition}
+            \State \texttt{new\_cut\_weight} $\gets$ compute the cut weight
             \If{\texttt{new\_cut\_weight} \ensuremath{>} \texttt{cut\_weight}}
                 \State \texttt{cut\_weight} $\gets$ \texttt{new\_cut\_weight}
                 \State \texttt{improved} $\gets$ \texttt{True}
                 \State \textbf{break}  \Comment{Stop iteration for this node}
-            \Else
-                \State Revert the partition of \texttt{node}
             \EndIf
+            \State Revert the partition of \texttt{node} in \texttt{partition}
         \EndFor
     \EndWhile
 
