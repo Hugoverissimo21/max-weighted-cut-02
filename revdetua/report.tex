@@ -50,7 +50,7 @@ Este relatório apresenta a implementação e comparação de dois métodos para
 
 \section{Introdução}
 
-ja se analisou no outro relatorio a descrição do problema \textit{Maximum Weight Cut}, \cite{BS22} e ns q, super fixe
+ja se analisou no outro relatorio a descrição do problema \textit{Maximum Weight Cut}, e ns q, super fixe
 
 este relatoria visa explorar algoritmos com um certo grau de estocacidade/aletorieda com vista em otimizar a complexidade e as solucoes.
 
@@ -70,16 +70,11 @@ Graphs for the Computational Experiments: mine and elearnig ou links and gset
 
 \section{Algoritmo de 1}
 
-- falar de como sao construidos: componente aletoria e determinisica ?
+este algoritmo é o tipico "aleatorio" que consite na geracao de solucoes aleatorias, e a comparacao das mesmas, e a escolha da melhor solucao, nao havendo qualquer componente deterministica (?)
 
-- Ensuring that no such solutions are tested more than once., como fiz isto
+para garantir que n ha solucoes testadas mais q uma vez, as solucoes ja testadas sao guardadas num set, e antes de testar uma nova solucao, verifica se esta ja foi testada, e se sim, passa para a proxima solucao evitando o calculo do peso do corte, uma operacao que é cara
 
-- quando é q o algortimo para?
-
-
-
-
-
+este algortimo ou quando atingir o numero de solucoes a gerar ou quando todas as solucoes possiveis foram testadas, ou seja, quando o numero de solucoes testadas for igual a $2^n$
 
 \begin{algorithm}[H]
 \raggedright
@@ -119,13 +114,30 @@ Graphs for the Computational Experiments: mine and elearnig ou links and gset
 \end{algorithmic}
 \end{algorithm}
     
+quando a complexidade, este algortimo, a parte mais cara é o loop que corre no maximo \texttt{solutions} vezes, e dentro dele, a complexidade é O(n + m) por gerar uma particao aleatoria e calcular o peso do corte, logo a complexidade final é $O((m + m) \times \texttt{solutions})$, tendendo para $O(n^2)$ para grafos densos e um n grande
 
 
-- complexidade
+
 
 \section{Algoritmo de 2}
 
-dsadasd
+%https://apps.dtic.mil/sti/citations/ADA185547
+
+o segundo algortimo a ser implementado é o Simulated Annealing, que é um algoritmo de otimizacao global, que procura a melhor solucao possivel, e que é baseado no processo de arrefecimento de metais, que consiste em arrefecer um metal a uma taxa controlada, para que os atomos se organizem de forma a minimizar a energia do sistema. ns q, o algortimo simulated Annealing consite em ... e é heuristico e ns q e random (referencias)
+
+este algortimo já foi implementado no problema max cut por exemplo \cite{SAT15}
+
+neste caso tem como componente aleatorio a selecao de uma solucao inicial e a aceitacao de solucoes piores, com uma probabilidade que decresce com o tempo, mas sendo esta aceite smp que a solucao for melhor que a anterior (determinisico)
+
+por ser sensivel a solucao inicial, é interessante testar diferentes solucoes iniciais, e por isso o algoritmo deve ser corrido um numero de vezes
+
+neste algoritmo não ha garantia de que cada sol so é testada uma vez, por opção propria. visto que a probabilidade de testar a mesma solucao é dada por:
+
+\dots
+
+para grafos de maiores dimensões, esta prob torna-se muito baixa, e por isso a probabilidade de testar a mesma solucao é baixa, fazendo com que o processo de comparar solucoes ja testadas possa prejudicar a eficiencia do algoritmo 
+
+o algortimo para quando a temperatura é menor que $10^{-3}$, pelo que o numero de iteracoes é variavel e depende do valor da temperatura inicial e da taxa de arrefecimento
 
 \begin{algorithm}[H]
 \raggedright
@@ -168,22 +180,39 @@ dsadasd
 \end{algorithmic}
 \end{algorithm}
 
-    
+- complexidade on4 ?
 
-...
+tendo em conta a complexidade do algortimo, o gerar uma particao inicial envolve o(n) pq vai vertice a evrtice atribuir determinado subt. depois o valvulo do current cut envolve o(m) visto q corre a lista de todos os vertices
 
-- complexidade
+depois corre o loop K vezes
 
-- falar de como sao construidos: componente aletoria e determinisica ?
+esolhe um nó e muda a sua partição o(1), recalcula o novo peso do corte o(m) e depois compara o novo corte com o anterior o(1) e se for melhor atualiza o corte e a particao o(1)
 
-- Ensuring that no such solutions are tested more than once., como fiz isto
+ou seja a complexidade é O(m) * K
 
-- quando é q o algortimo para?
+K é dado por:
+
+\begin{align*}
+    &T_0 \cdot (\text{cooling\_rate})^k \le 10^{-3} \\
+    \Leftrightarrow\ &  k \geq  \frac{\log\left(\frac{10^{-3}}{T_0}\right)}{\log(\text{cooling\_rate})} \\
+    \Leftrightarrow\ & k = \left\lceil \frac{\log\left(\frac{10^{-3}}{T_0}\right)}{\log(\text{cooling\_rate})} \right\rceil
+\end{align*}
+
+logo a complexidade final é dada por $O(m) \approx O(n^2)$ para grafos densos , pq k é uma constante que não depende nem de m nem de n 
+
+%https://apps.dtic.mil/sti/citations/ADA185547 O(n4)
+
 
 
 \section{Algoritmo de 3}
 
-...
+este algoritmo consiste numa heuristica gulosa, que consiste em iterar por todos os vertices e trocar a sua particao, verificando se a solucao é melhor, e se for, atualiza a solucao, e quanto iterar por todos e nao melhorar em nenhum para.
+
+contudo isto tornava o algoritmo muito lento, apesar dos bons repertidos, para isso foi adicionado um fator de ajuste do maximo de iteracoes (\textit{itLim}), que é o numero de arestas vezes o fator de ajuste, evitando assim que o algoritmo corra indefinidamente
+
+como o algoritmo é guloso, a solucao final depende da solucao inicial, gerada aleatoriamente, e por isso o algoritmo deve ser corrido varias vezes, para garantir uma maior probabilidade a melhor solucao é encontrada
+
+neste algoritmo, como a unica componente aleatoria é a particao inciial e como todas as alteracoes sao feitas em diracao a melhor solucao, o algoritmo nunca ira testar a mesma solucao duas vezes, pelo que nao é necessario guardar as solucoes ja testadas
 
 \begin{algorithm}[H]
 \raggedright
@@ -224,14 +253,12 @@ dsadasd
 \end{algorithmic}
 \end{algorithm}
     
+quanto a compelxidade, gerar a particao inicial e calcular o seu peso é O(n + m), pq corre a lista de vertices e a lista de arestas
 
-- complexidade
+depois com o ciclo, ira correr no maximo O(itLim x m) e dentro dele a compelxidade é O(n) por correr os nós todos x O(m) por calcular o peso a cada vertice q passa
 
-- falar de como sao construidos: componente aletoria e determinisica ?
+logo a complixidade final é $O(m \times \texttt{itLim} \times n \times m)$ que tende para $O(n^5)$ para grafos densos
 
-- Ensuring that no such solutions are tested more than once., como fiz isto
-
-- quando é q o algortimo para?
 
 \section{Análise dos Resultados}
 
