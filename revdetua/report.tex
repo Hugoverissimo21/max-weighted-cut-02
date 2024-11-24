@@ -129,6 +129,13 @@ este algortimo já foi implementado no problema max cut por exemplo \cite{SAT15}
 
 neste caso tem como componente aleatorio a selecao de uma solucao inicial e a aceitacao de solucoes piores, com uma probabilidade que decresce com o tempo, mas sendo esta aceite smp que a solucao for melhor que a anterior (determinisico)
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/SA_DecrAceit.png}
+    \caption{ver que a aceitacao diminui com as iteracaoes por causa do arreficmento e bla bla, G59 usado e seed do SA 124348}
+    \label{fig:sa_aceitacao}
+\end{figure}
+
 por ser sensivel a solucao inicial, é interessante testar diferentes solucoes iniciais, e por isso o algoritmo deve ser corrido um numero de vezes
 
 neste algoritmo não ha garantia de que cada sol so é testada uma vez, por opção propria. visto que a probabilidade de testar a mesma solucao é dada por:

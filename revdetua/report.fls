@@ -111,6 +111,11 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 OUTPUT report.pdf
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ../assets/SA_DecrAceit.png
+INPUT ../assets/SA_DecrAceit.png
+INPUT ../assets/SA_DecrAceit.png
+INPUT ../assets/SA_DecrAceit.png
+INPUT ../assets/SA_DecrAceit.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT ./report.bbl

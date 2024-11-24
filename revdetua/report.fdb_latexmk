@@ -1,14 +1,15 @@
 # Fdb version 4
-["bibtex report"] 1732401149.27159 "report.aux" "report.bbl" "report" 1732402190.81723 0
+["bibtex report"] 1732406549.00503 "report.aux" "report.bbl" "report" 1732406608.64159 0
   "./p-revdetua.bst" 1326997358 15609 44ecfa447d812c289732ae87d3faed4d ""
-  "./refs.bib" 1732401133.50125 271 9ef3235181d9c2c01981b18b1c91e7c2 ""
-  "report.aux" 1732402190.58144 330 3d189a18bb0fafea40fd697fc639edf6 "pdflatex"
+  "./refs.bib" 1732403592.58727 271 9ef3235181d9c2c01981b18b1c91e7c2 ""
+  "report.aux" 1732406608.40476 436 a4d35d68d6c1c05f507f75010220ad64 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1732402190.15154 "/Users/hugover/Desktop/AA02/revdetua/report.tex" "report.pdf" "report" 1732402190.81735 0
-  "/Users/hugover/Desktop/AA02/revdetua/report.tex" 1732402189.96173 13532 140f52e4c2cbde9e60106bf2ff6c4e7a ""
+["pdflatex"] 1732406603.77501 "/Users/hugover/Desktop/AA02/revdetua/report.tex" "report.pdf" "report" 1732406608.6417 0
+  "../assets/SA_DecrAceit.png" 1732406312.47532 4378840 9b5441da486bc9768649bf6d59cc6e19 ""
+  "/Users/hugover/Desktop/AA02/revdetua/report.tex" 1732406603.57265 13806 44bfc3ed31d08b7867317bd461b45d5b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -94,9 +95,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1724153806 5498206 6c0f03cb370063b7ddbd563e5f9ce23a ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1724153954 8239412 02a25d85eb128426e9965e27e7615548 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "report.aux" 1732402190.58144 330 3d189a18bb0fafea40fd697fc639edf6 "pdflatex"
-  "report.bbl" 1732401149.35562 222 e68e5bf1d36d26982f5030441ab63157 "bibtex report"
-  "report.tex" 1732402189.96173 13532 140f52e4c2cbde9e60106bf2ff6c4e7a ""
+  "report.aux" 1732406608.40476 436 a4d35d68d6c1c05f507f75010220ad64 "pdflatex"
+  "report.bbl" 1732406549.10648 222 e68e5bf1d36d26982f5030441ab63157 "bibtex report"
+  "report.tex" 1732406603.57265 13806 44bfc3ed31d08b7867317bd461b45d5b ""
   "revdetua.cls" 1348080372 24164 8b1d9d26252f6b3f92c4a1888d855feb ""
   (generated)
   "report.aux"
