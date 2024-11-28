@@ -10,7 +10,6 @@
 %
 % Note: the final version should use the times fonts
 % Note: the really final version should also use the mirror option
-%
 
 \usepackage[portuguese]{babel}
 \usepackage[utf8]{inputenc}
@@ -42,6 +41,7 @@
 
 \begin{abstract}
 ... abstrato em ingles
+% por fazer abstrato
 \end{abstract}
 
 \begin{resumo}
@@ -50,31 +50,43 @@ Este relatório apresenta a implementação e comparação de dois métodos para
 
 \section{Introdução}
 
-ja se analisou no outro relatorio a descrição do problema \textit{Maximum Weight Cut}, e ns q, super fixe
+O problema \textit{Maximum Weight Cut} é um problema de otimização, que tem como objetivo encontrar o corte mais pesado num grafo não direcionado $G(V,E)$, onde $|V| = n$ vértices e $|E| = m$ arestas. Este corte envolve dividir os vértices do grafo em dois subconjuntos disjuntos $S$ e $T$, sendo que o corte é a soma dos pesos das arestas que ligam os vértices de $S$ aos vértices de $T$: $|E(S, T)|$ \cite{AG14}.
 
-este relatoria visa explorar algoritmos com um certo grau de estocacidade/aletorieda com vista em otimizar a complexidade e as solucoes.
+No passado relatório foram analisados algoritmos determinísticos para resolver o problema \textit{Maximum Weight Cut}, nomeadamente a pesquisa exaustiva e a heurística gulosa. Neste relatório, serão analisados novos algoritmos com um certo grau de estocasticidade, com o objetivo de encontrar um algortimo que otimize o equilíbrio entre a complexidade computacional e a qualidade da solução obtida.
 
+% POR ACABAR INTRO
 para alem disso os resultados são comparados aos obtidos anteriormente
 
 serao entao implexmentados 3 algoritmos, nomeadamente: ... e ...
 
 \section{Metodologia da Análise}
 
-vamos usar o python por ter o modulo random e outros
+Com o intuito de analisar o problema em destaque, implementar os algoritmos referidos e comparar os resultados obtidos, foi utilizada a linguagem de programação \textit{Python}, devido à vasta variedade de bibliotecas que contém, facilitando a implementação eficiente e simplificada dos algoritmos necessários.
 
-ns q vamos usar os ficheiro tal e tal 
+% ACABAR ISTO, CORRIGIR COM OS PRINCIPAIS Q USAR REALMENTE
+Sem desmerecer o uso de ficheiros auxiliares, a análise desenvolvida pode ser dividida em 2 ficheiros principais, sendo estes:
+\begin{verbatim}
+    $ python3 benchmarks.py
+\end{verbatim}
+% .......
 
-e para testar os algortimos serão testados os graficos do Gset e criados por nós com o ficheiro tal
+Para a realização da análise dos algoritmos criados, foram utilizados grafos gerados aleatoriamente, com a semente $124348$, com diferentes números de vértices e densidade de arestas, e os grafos da coleção \textit{Gset}, disponibilizada por Yinyu Ye \cite{GS24}.
 
-Graphs for the Computational Experiments: mine and elearnig ou links and gset
+\section{Algoritmo de Particionamento Aleatório}
 
-\section{Algoritmo de 1}
+O primeiro algoritmo a ser implementado é um algoritmo de particionamento aleatório, que consiste em gerar várias soluções aleatórias e comparar as mesmas, escolhendo a melhor solução \cite{AG14}.
 
-este algoritmo é o tipico "aleatorio" que consite na geracao de solucoes aleatorias, e a comparacao das mesmas, e a escolha da melhor solucao, nao havendo qualquer componente deterministica (?)
+Este será um algortimo computacionalmente leve, pela sua simplicidade, mas não garante a obtenção da solução ótima, devido à sua natureza aleatória, sendo que a probabilidade de encontrar a mesma, assumindo que é única, é dada por
 
-para garantir que n ha solucoes testadas mais q uma vez, as solucoes ja testadas sao guardadas num set, e antes de testar uma nova solucao, verifica se esta ja foi testada, e se sim, passa para a proxima solucao evitando o calculo do peso do corte, uma operacao que é cara
+$$1 - \left( 1 - \frac{1}{2^{n-1}} \right)^{solutions}$$
 
-este algortimo ou quando atingir o numero de solucoes a gerar ou quando todas as solucoes possiveis foram testadas, ou seja, quando o numero de solucoes testadas for igual a $2^n$
+\noindent onde $n$ é o número de vértices e $solutions$ é o número de soluções a gerar. Pode-se facilmente verificar que, para grafos de grandes dimensões, esta probabilidade decresce exponencialmente, tornando o algoritmo cada vez menos preciso.
+
+Pelo facto do algoritmo gerar muitas soluções aleatórias, é importante garantir que não existem soluções repetidas a ser testadas, para evitar o cálculo do peso do corte, uma operação computacionalmente cara. Para isso é criado um \textit{set} onde serão guardadas as soluções já testadas, e cada vez que uma solução for gerada, a mesma só será testada depois de ser verificado que não é uma repetição. 
+
+Atendendo à paragem do algoritmo, este tem dois critério de paragem, parando assim que um deles é verificado. O primeiro, e mais provável em grafos de grandes dimensões, é quando o número de soluções geradas atinge o limite, definido pelo utilizador. O segundo critério, é verificado quando todas as soluções possíveis foram testadas, ou seja, quando o \textit{set} que acompanha as soluções testadas contém $2^n$ elementos.
+
+Este algoritmo pode ser então traduzido para o seguinte pseudocódigo:
 
 \begin{algorithm}[H]
 \raggedright
@@ -87,7 +99,7 @@ este algortimo ou quando atingir o numero de solucoes a gerar ou quando todas as
 - número de soluções a gerar (\textit{solutions})\\
 \textbf{Saída:} subconjuntos \textit{S} e \textit{T}, peso do corte (\textit{weight}) \\
 \hrule 
-\caption{NOME DO ALGORTIMO}
+\caption{Particionamento Aleatório}
 \begin{algorithmic}[1]
     \State \texttt{best\_solution} $\gets$ \texttt{None}
     \State \texttt{weight} $\gets$ 0
@@ -114,8 +126,19 @@ este algortimo ou quando atingir o numero de solucoes a gerar ou quando todas as
 \end{algorithmic}
 \end{algorithm}
     
+
+% AQUIII 
+
 quando a complexidade, este algortimo, a parte mais cara é o loop que corre no maximo \texttt{solutions} vezes, e dentro dele, a complexidade é O(n + m) por gerar uma particao aleatoria e calcular o peso do corte, logo a complexidade final é $O((m + m) \times \texttt{solutions})$, tendendo para $O(n^2)$ para grafos densos e um n grande
 
+meter grafico e verificar complexidade
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/ops_Random Sol.png}
+    \caption{camptionsdasid8}
+    \label{fig:random_ops}
+\end{figure}
 
 
 
@@ -129,7 +152,7 @@ este algortimo já foi implementado no problema max cut por exemplo \cite{SAT15}
 
 neste caso tem como componente aleatorio a selecao de uma solucao inicial e a aceitacao de solucoes piores, com uma probabilidade que decresce com o tempo, mas sendo esta aceite smp que a solucao for melhor que a anterior (determinisico)
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/SA_DecrAceit.png}
     \caption{ver que a aceitacao diminui com as iteracaoes por causa do arreficmento e bla bla, G59 usado e seed do SA 124348}
