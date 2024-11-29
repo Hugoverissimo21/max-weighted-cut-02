@@ -1,16 +1,17 @@
 # Fdb version 4
-["bibtex report"] 1732830693.60047 "report.aux" "report.bbl" "report" 1732830700.20318 0
+["bibtex report"] 1732909710.88334 "report.aux" "report.bbl" "report" 1732916815.1229 0
   "./p-revdetua.bst" 1326997358 15609 44ecfa447d812c289732ae87d3faed4d ""
-  "./refs.bib" 1732828452.14634 811 a5c08cb93ba05d2e2a7d0d01b02fef4b ""
-  "report.aux" 1732830699.93771 560 22b75955fa0754efb67c9bfcefcc4033 "pdflatex"
+  "./refs.bib" 1732903195.71531 1120 35e40464929a8a0436bc9b8bc0d8c4bc ""
+  "report.aux" 1732916814.86884 630 24d2b48b623ad305118822ed45a2be26 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1732830693.69121 "/Users/hugover/Desktop/AA02/revdetua/report.tex" "report.pdf" "report" 1732830700.20331 0
+["pdflatex"] 1732916806.71976 "/Users/hugover/Desktop/AA02/revdetua/report.tex" "report.pdf" "report" 1732916815.12301 0
   "../assets/SA_DecrAceit.png" 1732406312.47532 4378840 9b5441da486bc9768649bf6d59cc6e19 ""
-  "../assets/ops_Random Sol.png" 1732819761.22357 438718 69dbe359195e49e1e7410e69417a8281 ""
-  "/Users/hugover/Desktop/AA02/revdetua/report.tex" 1732830686.75039 16321 e49170324ed0c89343412829c9eca8d6 ""
+  "../assets/ops_Random Sol.png" 1732902248.39052 553507 dfede3cbcdf13ab51aac2f732023ce5b ""
+  "../assets/ops_Simulated .png" 1732909873.88016 764002 846319c9dba85adb35f25a72f3ac0184 ""
+  "/Users/hugover/Desktop/AA02/revdetua/report.tex" 1732916806.90615 19742 672ae22104502c386c665a330d9f5ffb ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -94,9 +95,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1724153806 5498206 6c0f03cb370063b7ddbd563e5f9ce23a ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1724153954 8239412 02a25d85eb128426e9965e27e7615548 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "report.aux" 1732830699.93771 560 22b75955fa0754efb67c9bfcefcc4033 "pdflatex"
-  "report.bbl" 1732830693.68947 633 4ac08a49d0a85924762ffb05b43d69b1 "bibtex report"
-  "report.tex" 1732830686.75039 16321 e49170324ed0c89343412829c9eca8d6 ""
+  "report.aux" 1732916814.86884 630 24d2b48b623ad305118822ed45a2be26 "pdflatex"
+  "report.bbl" 1732909710.97543 882 8ae19235c4f30fdad3251b6d9fb5966f "bibtex report"
+  "report.tex" 1732916806.90615 19742 672ae22104502c386c665a330d9f5ffb ""
   "revdetua.cls" 1348080372 24164 8b1d9d26252f6b3f92c4a1888d855feb ""
   (generated)
   "report.aux"
