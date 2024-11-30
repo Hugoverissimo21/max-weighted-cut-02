@@ -1,18 +1,24 @@
 # Fdb version 4
-["bibtex report"] 1732978836.32209 "report.aux" "report.bbl" "report" 1732980645.08803 0
+["bibtex report"] 1732983002.06929 "report.aux" "report.bbl" "report" 1732983024.27756 0
   "./p-revdetua.bst" 1326997358 15609 44ecfa447d812c289732ae87d3faed4d ""
   "./refs.bib" 1732903195.71531 1120 35e40464929a8a0436bc9b8bc0d8c4bc ""
-  "report.aux" 1732980644.83752 753 69f78b2a66fc72afe10fccb204060183 "pdflatex"
+  "report.aux" 1732983023.98621 1019 035bc40e73716b6d23de1fc8048840f6 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1732980634.44237 "/Users/hugover/Desktop/AA02/revdetua/report.tex" "report.pdf" "report" 1732980645.08815 0
+["pdflatex"] 1732983002.16339 "/Users/hugover/Desktop/AA02/revdetua/report.tex" "report.pdf" "report" 1732983024.27768 0
   "../assets/SA_DecrAceit.png" 1732406312.47532 4378840 9b5441da486bc9768649bf6d59cc6e19 ""
-  "../assets/ops_Random Greedy.png" 1732980627.22856 2385696 d28f5f885688b8e4111129ec45c5e713 ""
-  "../assets/ops_Random Sol.png" 1732980625.00846 543799 fb6c7562c1c1e94f1536831292da801a ""
-  "../assets/ops_Simulated .png" 1732980623.08629 716907 7b1bd3390e04300b55ccc74e55f2ed31 ""
-  "/Users/hugover/Desktop/AA02/revdetua/report.tex" 1732973836.95745 24200 39691be89619dfc2eaedf86c7035f022 ""
+  "../assets/basicops.png" 1732982966.27019 545426 f02bbc4aea49532ecbc7d6d8ddcd1733 ""
+  "../assets/ops_Random Greedy.png" 1732982980.02213 750544 48a40976cdd7e85372b975378bdffd0e ""
+  "../assets/ops_Random Sol.png" 1732982959.90256 543799 fb6c7562c1c1e94f1536831292da801a ""
+  "../assets/ops_Simulated .png" 1732982957.91767 716907 7b1bd3390e04300b55ccc74e55f2ed31 ""
+  "../assets/sols_Random Greedy.png" 1732982972.94319 826965 b965eb3aaa73a62e53ece3551b328017 ""
+  "../assets/sols_Random Sol.png" 1732982968.54581 462561 4b99ac127aeb3f9331d384287520770a ""
+  "../assets/sols_Simulated .png" 1732982970.61446 435846 36fa2581b07ce49c7ee3ba69c252ffe5 ""
+  "../assets/time_all.png" 1732982975.47605 2003373 0021fdabbd625fb1341276216e91f664 ""
+  "../assets/time_interval.png" 1732982977.88131 2315003 f1cc13f22adebf8d7f58ccfb389188fc ""
+  "/Users/hugover/Desktop/AA02/revdetua/report.tex" 1732982986.92317 26162 84572ff5299037e62c95d4c8b7db4f21 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -97,9 +103,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1724153806 5498206 6c0f03cb370063b7ddbd563e5f9ce23a ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1724153954 8239412 02a25d85eb128426e9965e27e7615548 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "report.aux" 1732980644.83752 753 69f78b2a66fc72afe10fccb204060183 "pdflatex"
-  "report.bbl" 1732978836.4122 882 8ae19235c4f30fdad3251b6d9fb5966f "bibtex report"
-  "report.tex" 1732973836.95745 24200 39691be89619dfc2eaedf86c7035f022 ""
+  "report.aux" 1732983023.98621 1019 035bc40e73716b6d23de1fc8048840f6 "pdflatex"
+  "report.bbl" 1732983002.16239 882 8ae19235c4f30fdad3251b6d9fb5966f "bibtex report"
+  "report.tex" 1732982986.92317 26162 84572ff5299037e62c95d4c8b7db4f21 ""
   "revdetua.cls" 1348080372 24164 8b1d9d26252f6b3f92c4a1888d855feb ""
   (generated)
   "report.aux"

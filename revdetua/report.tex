@@ -144,6 +144,12 @@ A complexidade referida é confirmada pela análise experimental apresentada na 
 
 % dizer que o algortimo e mais rapido e isso qnd ms é 100 e coisas assim
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/sols_Random Sol.png}
+    \caption{captio caption caption}
+    \label{fig:sols_randomrandom}
+\end{figure}
 
 
 \section{Algoritmo de Simulated Annealing}
@@ -236,6 +242,13 @@ Através da Fig. \ref{fig:sa_ops} que representa o número de operações básic
 
 % falar a dizer q t maior implica... e cr maior implica ...
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/sols_Simulated .png}
+    \caption{captio caption caption}
+    \label{fig:sols_satested}
+\end{figure}
+
 
 \section{Algoritmo Guloso Aleatório}
 
@@ -301,6 +314,13 @@ Através da Fig. \ref{fig:random_greedy}, que representa o número de operaçõe
 
 $$m \approx \frac{n(n-1)}{2} \Rightarrow n \approx \sqrt{m}$$
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/sols_Random Greedy.png}
+    \caption{captio caption caption}
+    \label{fig:sols_randomgreedy}
+\end{figure}
+
 
 
 
@@ -340,9 +360,14 @@ Guloso Aleatório & $O(m^2 \times n)$ \\
 
 Tendo em conta que para grafos de maiores dimensões, com elevado número de arestas, a relação entre $n$ e $m$ é dada por $n^2 \approx m$, torna-se possível realizar a seguinte visualização
 
-...
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/basicops.png}
+    \caption{PLOT COMPLEXIDADES EM FUNCAO DE N}
+    \label{fig:total_ops_per_alg}
+\end{figure}
 
-PLOT COMPLEXIDADES EM FUNCAO DE N
+
 
 ns q ve se q ns qm sobe mais e isso
 
@@ -353,16 +378,30 @@ ns q ve se q ns qm sobe mais e isso
 
 - Estimate the execution time that would be required by much larger problem instances.
 
-dsadasd
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/time_all.png}
+    \caption{captio caption caption}
+    \label{fig:time_all}
+\end{figure}
+
+ns q n se ve bem, os grafos grandes ele e menos preciso e por causa do ambiente do pc e ns q fica assim meio coiso, n tem tantos para fazer mediana
+
+ent corta-se e faz se so num intervalo para ter uma melhor percecao e ambiente mais controlado
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/time_interval.png}
+    \caption{captio caption caption}
+    \label{fig:time_interval}
+\end{figure}
 
 
-\subsection{(3) the number of solutions / configurations tested}
-
-sadsad 
 
 \subsection{precision}
 
-E METER TBM STDV !!!
+sdhuiashdiauhd
+
 
 \begin{table}[H]
 \centering
@@ -372,15 +411,26 @@ E METER TBM STDV !!!
 \toprule
 \textbf{Algoritmo} & \textbf{GPeq. Prec.} & \textbf{GSet Prec.} \\
 \midrule
-Nome do algoritmo & $32\%$ & $32\%$ \\
-Nome do algoritmo & $32\%$ & $32\%$ \\
-SA (t: 1000, cr: 0.99) & $32\%$ & $32\%$ \\
-Nome do algoritmo & $32\%$ & $32\%$ \\
-Nome do algoritmo & $32\% \ (4.3)$ & $32\% \ (4.3)$ \\
+Pesquisa Exaustiva & $100\% \ (0)$ & $-$ \\
+Pesquisa Gulosa & $93\% \ (6.9)$ & $61\% \ (23.1)$ \\
+Corte Aleatório (MS: 100) & $92\% \ (6.3)$ & $41\% \ (35.6)$ \\
+Corte Aleatório (MS: 1000) & $96\% \ (4.5)$ & $42\% \ (35.0)$ \\
+Corte Aleatório (MS: 10000) & $98\% \ (2.4)$ & $43\% \ (34.6)$ \\
+SA (T: 100, CR: 0.99) & $99\% \ (1.3)$ & $58\% \ (28.7)$ \\
+SA (T: 1000, CR: 0.9) & $97\% \ (3.1)$ & $40\% \ (36.1)$ \\
+SA (T: 1000, CR: 0.95) & $98\% \ (2.6)$ & $44\% \ (34.4)$ \\
+SA (T: 1000, CR: 0.99) & $99\% \ (1.3)$ & $59\% \ (28.5)$ \\
+Guloso Aleatório (IT: 0.01) & $75\% \ (14.5)$ & $58\% \ (30.1)$ \\
+Guloso Aleatório (IT: 0.1) & $84\% \ (12.4)$ & $90\% \ (7.7)$ \\
+Guloso Aleatório (IT: 2) & $96\% \ (3.7)$ & $88\% \ (8.4)$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
+
+ns q precisao e desvio padrao entre parentes
+
+olha q alguns nao correram na totalidade no gset, meter * e dizer ns q nao correu em todos por ser demorado e ns q, mas de qq forma da uma ideia
 
 \section{Conclusão}
 
