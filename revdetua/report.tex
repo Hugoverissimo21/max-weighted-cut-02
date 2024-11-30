@@ -35,8 +35,7 @@
 
 \Header{02}{3}{Dezembro}{2024}{1}
 
-\title{Maximum Weight Cut Problem}
-% MUDAR TITULO ALLEZ ALLEZ ALGO COM RANDOMIZADO
+\title{Problema Max-Cut: Algoritmos Aleatorizados}
 \author{Hugo Veríssimo - 124348 - hugoverissimo@ua.pt}
 \maketitle
 
@@ -47,26 +46,23 @@
 
 \begin{resumo}
 Este relatório apresenta a implementação e comparação de dois métodos para resolver o problema \textit{Maximum Weight Cut}: uma pesquisa exaustiva e uma heurística gulosa. O problema \textit{Maximum Weight Cut} con ESTE É O ANTIGO FAZER NOVO
+% por fazer abstrato
 \end{resumo}
 
 \section{Introdução}
 
-O problema \textit{Maximum Weight Cut} é um problema de otimização, que tem como objetivo encontrar o corte mais pesado num grafo não direcionado $G(V,E)$, onde $|V| = n$ vértices e $|E| = m$ arestas. Este corte envolve dividir os vértices do grafo em dois subconjuntos disjuntos $S$ e $T$, sendo que o corte é a soma dos pesos das arestas que ligam os vértices de $S$ aos vértices de $T$: $|E(S, T)|$ \cite{AG14}.
+O problema \textit{Maximum Weight Cut} é um problema de otimização, que tem como objetivo encontrar o corte mais pesado num grafo não direcionado $G(V,E)$, onde $|V| = n$ vértices e $|E| = m$ arestas. Este corte envolve dividir os vértices do grafo em dois subconjuntos disjuntos $S$ e $T$, sendo que o peso do corte é a soma dos pesos das arestas que ligam os vértices de $S$ aos vértices de $T$: $|E(S, T)|$ \cite{AG14}.
 
-No passado relatório foram analisados algoritmos determinísticos para resolver o problema \textit{Maximum Weight Cut}, nomeadamente a pesquisa exaustiva e a heurística gulosa. Neste relatório, serão analisados novos algoritmos com um certo grau de estocasticidade, com o objetivo de encontrar um algortimo que otimize o equilíbrio entre a complexidade computacional e a qualidade da solução obtida.
+No passado relatório foram analisados algoritmos determinísticos para resolver o problema \textit{Maximum Weight Cut}, nomeadamente a pesquisa exaustiva e a heurística gulosa. Neste relatório, serão analisados novos algoritmos com um certo grau de aleatoriedade, com o objetivo de encontrar um algortimo que otimize o equilíbrio entre a complexidade computacional e a qualidade da solução obtida. Os algoritmos a serem analisados são o algoritmo de corte aleatório, o algoritmo de \textit{Simulated Annealing} e o algoritmo guloso aleatório.
 
-% POR ACABAR INTRO
-para alem disso os resultados são comparados aos obtidos anteriormente
-
-serao entao implexmentados 3 algoritmos, nomeadamente: ... e ...
-
-DIZER ALGURES Q O NUMERO DE OPERACOES SERA A METRICA USADA PARA CONFIRMAR A COMPLEXIDADE DOS ALGORTIMO
+Para além disso, será também analisada a complexidade de cada algoritmo, o número de operações básicas realizadas, o tempo de execução, o número de soluções testadas e a precisão das soluções obtidas, com o intuito de comparar os diferentes algoritmos e determinar o mais eficiente e eficaz para resolver o problema em questão. Os resultados obtidos ao longo deste relatório, com estes novos algoritmos, serão também comparados com os resultados obtidos com os algoritmos determinísticos, analisados no relatório anterior.
 
 \section{Metodologia da Análise}
 
 Com o intuito de analisar o problema em destaque, implementar os algoritmos referidos e comparar os resultados obtidos, foi utilizada a linguagem de programação \textit{Python}, devido à vasta variedade de bibliotecas que contém, facilitando a implementação eficiente e simplificada dos algoritmos necessários.
 
 % ACABAR ISTO, CORRIGIR COM OS PRINCIPAIS Q USAR REALMENTE
+% GUARDAR OS FICHEIROS EM FORMATO PYTHON
 Sem desmerecer o uso de ficheiros auxiliares, a análise desenvolvida pode ser dividida em 2 ficheiros principais, sendo estes:
 \begin{verbatim}
     $ python3 benchmarks.py
