@@ -61,19 +61,13 @@ Para além disso, será também analisada a complexidade de cada algoritmo, o n�
 
 Com o intuito de analisar o problema em destaque, implementar os algoritmos referidos e comparar os resultados obtidos, foi utilizada a linguagem de programação \textit{Python}, devido à vasta variedade de bibliotecas que contém, facilitando a implementação eficiente e simplificada dos algoritmos necessários.
 
-% ACABAR ISTO, CORRIGIR COM OS PRINCIPAIS Q USAR REALMENTE
-% GUARDAR OS FICHEIROS EM FORMATO PYTHON
-Sem desmerecer o uso de ficheiros auxiliares, a análise desenvolvida pode ser dividida em 2 ficheiros principais, sendo estes:
-\begin{verbatim}
-    $ python3 benchmarks.py
-\end{verbatim}
-% .......
+A análise desenvolvida tem por base o ficheiro \texttt{benchmark.py}, que foi responsável por implementar os algoritmos em estudo, acompanhar as métricas relevantes para os resultados a analisar, e guardar as mesmas num ficheiro \textit{.xlsx} (\textit{Excel}). Não obstante, também foram usados outros ficheiros, tais como \texttt{benchmarks (mergedf).ipynb} e \texttt{benchmarks (plots).ipynb}, que contribuiram para a análise dos resultados obtidos.
 
-Para a realização da análise dos algoritmos criados, foram utilizados grafos gerados aleatoriamente, com a semente $124348$, com diferentes números de vértices e densidade de arestas, e os grafos da coleção \textit{Gset}, disponibilizada por Yinyu Ye \cite{GS24}.
+Para a realização da análise dos algoritmos criados, foram utilizados grafos gerados aleatoriamente, com a semente $124348$, com diferentes números de vértices e densidade de arestas, através do ficheiro \texttt{graphs.py}, e os grafos da coleção \textit{Gset}, disponibilizada por Yinyu Ye \cite{GS24}.
 
 \section{Algoritmo de Corte Aleatório}
 
-O primeiro algoritmo a ser implementado é um algoritmo de corte aleatório, que consiste em gerar várias soluções aleatórias e comparar as mesmas, escolhendo a melhor solução \cite{AG14}.
+O primeiro algoritmo a ser implementado é um algoritmo de corte aleatório, que consiste em gerar várias soluções aleatórias, comparar as mesmas e escolher a melhor entre elas \cite{AG14}.
 
 Este será um algortimo computacionalmente leve, pela sua simplicidade, mas não garante a obtenção da solução ótima, devido à sua natureza aleatória, sendo que a probabilidade de encontrar a mesma, assumindo que é única, é dada por
 
@@ -125,36 +119,35 @@ Este algoritmo pode ser então traduzido para o seguinte pseudocódigo:
 \end{algorithmic}
 \end{algorithm}
     
-Pode-se observar que a parte computacionalmente mais custosa deste algoritmo é o ciclo, que é responsável por gerar cortes aleatórios e calcular o peso dos mesmos. A complexidade deste ciclo é dado por $O(n + m)$, por percorrer todos os vértices atribuindo-as a um dos subconjuntos, e por calcular o peso do corte, percorrendo todas as arestas. Assim, a complexidade final do algoritmo é dada por $O((n + m) \times \texttt{solutions})$, visto que o ciclo corre no máximo \texttt{solutions} vezes. Esta complexidade pode ser simplifcada para $O(m)$, visto que $m \gg n$ para grafos densos e um $n$ grande, e que \texttt{solutions} é uma constante.
+Pode-se observar que a parte computacionalmente mais custosa deste algoritmo é o ciclo, que é responsável por gerar cortes aleatórios e calcular o peso dos mesmos. A complexidade deste ciclo é dado por $O(n + m)$, por percorrer todos os vértices atribuindo-as a um dos subconjuntos, e por calcular o peso do corte, percorrendo todas as arestas. Assim, a complexidade final do algoritmo é dada por $O((n + m) \times \texttt{solutions})$, visto que o ciclo corre no máximo \texttt{solutions} vezes. Esta complexidade pode ser simplificada para $O(m)$, visto que $m \gg n$ para gradfos de grandes dimensões, e que \texttt{solutions} é uma constante.
+
+A complexidade referida é confirmada pela análise experimental apresentada na Fig. \ref{fig:random_ops}, onde se pode observar que o número de de operações básicas realizadas é linear em relação ao número de arestas do grafo, para diferentes números de soluções geradas. Nesta figura as retas apresentadas são dadas pela função $$f(m) = m \times \text{MS}$$ onde MS é o número de soluções a gerar (\texttt{solutions}). Quanto aos pontos acima das retas que representam a complexidade do algoritmo, estes serão devido ao facto de que para grafos de menores dimensões é possível que não se possa simplificar a complexidade para $O(m)$, visto que $n$ e $m$ são da mesma ordem de grandeza.
+
+Para além disso, também se pode reparar que o número de operações básicas realizadas é menor para um menor número de soluções geradas, o que é esperado, visto que o algoritmo realiza menos iterações.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/ops_Random Sol.png}
-    \caption{Número de operações básicas efetuadas pelo algoritmo de Corte Aleatório em função do número de arestas, para diferentes valores de \texttt{solutions} (MS).}
+    \caption{Número de operações básicas efetuadas pelo algoritmo de Corte Aleatório em função do número de arestas do grafo, para diferentes valores de \texttt{solutions} (MS).}
     \label{fig:random_ops}
 \end{figure}
 
-A complexidade referida é confirmada pela análise experimental apresentada na Fig. \ref{fig:random_ops}, onde se pode observar que o número de de operações básicas realizadas é linear em relação ao número de arestas do grafo, para diferentes números de soluções geradas.
-
-% dizer q é m * solutions no grafico e q os pontos acima do reta tem a ver com qnd o m não é mt maior q n, mas que em grafos densos pronto
-
-% dizer que o algortimo e mais rapido e isso qnd ms é 100 e coisas assim
+Quanto ao número de soluções testadas, a partir da Fig. \ref{fig:sols_randomrandom} e da análise do pseudocódigo, é possível verificar que o número é dado por $\min(2^n, \texttt{solutions})$.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/sols_Random Sol.png}
-    \caption{captio caption caption}
+    \caption{Número de soluções testadas pelo algoritmo de Corte Aleatório em função do número de arestas do grafo, para diferentes valores de \texttt{solutions} (MS). As retas horizontais são dadas por $f(m) = MS$.}
     \label{fig:sols_randomrandom}
 \end{figure}
 
-
 \section{Algoritmo de Simulated Annealing}
 
-O segundo algoritmo a ser implementado é o algoritmo de \textit{Simulated Annealing} (SA), uma heurística de pesquisa aleatória, que consiste em encontrar soluções aproximadas para problemas de otimização combinatória \cite{SAT15}. Este método consite em gerar uma solução inicial aleatória, e a partir desta solução, gerar soluções vizinhas, que são soluções obtidas a partir da solução atual, e comparar as soluções, aceitando as soluções melhores e algumas piores, com uma probabilidade que decresce ao longo das iterações, até que a temperatura (parâmetro do algoritmo), que vai arrefecendo ao longo das iterações a uma determinada taxa de arrefecimento (paraâmetro do algoritmo), seja menor que um determinado valor, por exemplo $10^{-3}$, sendo este o critério de paragem do algoritmo \cite{SA87}.
+O segundo algoritmo a ser implementado é o algoritmo de \textit{Simulated Annealing} (SA), uma heurística de pesquisa aleatória, que consiste em encontrar soluções aproximadas para problemas de otimização combinatória \cite{SAT15}. Este método consite em gerar uma solução inicial aleatória, e a partir desta solução, gerar soluções vizinhas, que são soluções obtidas a partir da solução atual, e comparar as soluções, aceitando as soluções melhores e algumas piores, com uma probabilidade que decresce ao longo das iterações, até que a temperatura (parâmetro do algoritmo), que vai arrefecendo ao longo das iterações a uma determinada taxa de arrefecimento (parâmetro do algoritmo), seja menor que um determinado valor, por exemplo $10^{-3}$, sendo este o critério de paragem do algoritmo \cite{SA87}.
 
-Assim, é possível verificar que este algortimo tem como componente aleatória a seleção de uma solução inicial e a aceitação de soluções piores, e como parte determinística a diminuição da probabilidade de aceitação de soluções piores ao longo das iterações e a garantia de aceitação de soluções melhores.
+Assim, é possível verificar que este algoritmo tem como componente aleatória a seleção de uma solução inicial e a aceitação de soluções piores, e como parte determinística a diminuição da probabilidade de aceitação de soluções piores ao longo das iterações e a garantia de aceitação de soluções melhores.
 
-Na Fig. \ref{fig:sa_aceitacao}, pode-se observar o comportamento decrescente da probabilidade de aceitação de soluções piores ao longo das iterações do algoritmo SA. Os pontos cinzentos representam números aleatórios gerados dentro do intervalo $[0,1]$ a cada iteração. A proposta de uma nova solução é aceite se esta for melhor que a solução atual ou se o valor aleatório (ponto cinzento) estiver abaixo da "curva" definida pelos pontos azuis. Esta curva reflete a probabilidade de aceitação, que diminui à medida que a temperatura decresce, limitando cada vez mais a aceitação de soluções subótimas.
+Na Fig. \ref{fig:sa_aceitacao}, pode-se observar o comportamento decrescente da probabilidade de aceitação de soluções piores ao longo das iterações do algoritmo de SA. Os pontos cinzentos representam números aleatórios gerados dentro do intervalo $[0,1]$ a cada iteração. A proposta de uma nova solução é aceite se esta for melhor que a solução atual ou se o valor aleatório (ponto cinzento) estiver abaixo da "curva" definida pelos pontos azuis. Esta curva reflete a probabilidade de aceitação, que diminui à medida que a temperatura decresce, limitando cada vez mais a aceitação de soluções subótimas.
 
 \begin{figure}[H]
     \centering
@@ -163,12 +156,12 @@ Na Fig. \ref{fig:sa_aceitacao}, pode-se observar o comportamento decrescente da 
     \label{fig:sa_aceitacao}
 \end{figure}
 
-É também importante referir que o algoritmo não garante a não repetição de soluções previamente testadas, e não foi implementado um mecanismo para tal, visto que a probabilidade de testar a mesma solução é baixa para grafos de grandes dimensões, e o processo de comparação de soluções já testadas poderia prejudicar a eficiência do algoritmo.
+É também importante referir que o algoritmo não garante a não repetição de soluções previamente testadas, e não foi implementado um mecanismo para tal, visto que a probabilidade de testar a mesma solução é baixa para grafos de grandes dimensões, e o processo de comparação de soluções já testadas prejudicaria a eficiência do algoritmo.
 
 % probabilidade de testar duas vezes a mesma solucao ?
 % em 1 passo, n/n * 1/n
-% 4 passos, n/n * 1/n * n-1/n * 1/n
-% ....
+% em 4 passos, n/n * 1/n * n-1/n * 1/n
+% em ... passos, ...
 
 O algoritmo de \textit{Simulated Annealing} pode ser examinado em detalhe no seguinte pseudocódigo:
 
@@ -225,34 +218,31 @@ Para além disso, através do pseudocódigo, é possível analisar a complexidad
 
 \noindent Quanto à complexidade dentro do ciclo, a mesma é dada por $O(m)$, visto que a operação mais custosa é o cálculo do peso do corte, que percorre todas as arestas do grafo. Assim, a complexidade final do algoritmo é dada por $O(m \times k)$, e pelo facto de $k$ depender apenas da temperatura inicial e da taxa de arrefecimento, a complexidade final pode ser aproximada por $O(m)$.
 
+Através da Fig. \ref{fig:sa_ops} que representa o número de operações básicas realizadas em função do número de arestas do grafo, para diferentes temperaturas iniciais e taxas de arrefecimento, pode-se verificar que a complexidade do algoritmo é linear em relação ao número de arestas do grafo. As curvas apresentadas são dadas pela função $f(m) = m \times k$, que consegue descrever o comportamento do algoritmo para grafos de diferentes dimensões, confirmando a complexidade calculada. Também se pode observar que são executadas mais operações básicas para temperaturas iniciais e taxas de arrefecimento mais altas, o que é esperado, visto que o algoritmo realiza mais iterações (maior $k$).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/ops_Simulated .png}
-    \caption{Número de operações básicas efetuadas pelo algoritmo de SA em função do número de arestas, para diferentes valores de \texttt{Temp} (T) e de \texttt{cooling\_rate} (CR).}
+    \caption{Número de operações básicas efetuadas pelo algoritmo de SA em função do número de arestas do grafo, para diferentes valores de \texttt{Temp} (T) e de \texttt{cooling\_rate} (CR).}
     \label{fig:sa_ops}
 \end{figure}
 
-
-Através da Fig. \ref{fig:sa_ops} que representa o número de operações básicas realizadas em função do número de arestas do grafo, para diferentes temperaturas iniciais e taxas de arrefecimento, pode-se verificar que a complexidade do algoritmo é linear em relação ao número de arestas do grafo, para diferentes temperaturas iniciais e taxas de arrefecimento.
-
-% falar a dizer q t maior implica... e cr maior implica ...
+Quanto ao número de soluções testadas, a partir da Fig. \ref{fig:sols_satested}, é possível verificar que o mesmo é constante e é igual a $k$, ou seja, é testada uma solução por iteração do algoritmo.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/sols_Simulated .png}
-    \caption{captio caption caption}
+    \caption{Número de soluções testadas pelo algoritmo de SA em função do número de arestas do grafo, para diferentes valores de \texttt{Temp} (T) e de \texttt{cooling\_rate} (CR). As retas horizontais são dadas por $f(m) = k$.}
     \label{fig:sols_satested}
 \end{figure}
-
 
 \section{Algoritmo Guloso Aleatório}
 
 Por fim, o terceiro algoritmo a ser implementado é um algoritmo guloso aleatório, que segue uma heurística baseada numa abordagem gulosa, não garantido encontrar a solução ótima. Este algoritmo itera sobre todos os vértices do grafo e, para cada vértice, troca a sua partição, verificando se a nova configuração melhora a solução atual. Caso o peso do corte com o vértice na partição oposta seja maior que o atual, a solução é atualizada. O processo continua até que uma iteração completa seja realizada sem encontrar melhorias, momento em que o algoritmo termina.
 
-Devido ao critério de paragem do algoritmo, este pode correr indefinidamente, devido à natureza aleatória da solução inicial, que pode estar a um grande número de iterações da solução estável que o algoritmo procura. Por isso, é adicionado um fator de ajuste do máximo de iterações (\textit{itLim}) ao algoritmo, tornando o número máximo de iterações do mesmo $m \times itLim$.
+Devido ao critério de paragem do algoritmo, este pode correr indefinidamente devido à natureza aleatória da solução inicial, que pode estar a um grande número de iterações da solução estável que o algoritmo procura. Por isso, é adicionado um fator de ajuste do máximo de iterações (\textit{itLim}) ao algoritmo, tornando o número máximo de iterações do mesmo $m \times itLim$.
 
-É também importante referir que, pelo factor na única componente aleatória deste algoritmo ser a criação de uma solução inicial, e como todas as iterações realizam alterações em direção à melhor solução, o algoritmo nunca irá testar a mesma solução mais que uma vez, pelo que manter um registo sobre as soluções já testadas não é necessário.
+É também importante referir que, pelo factor na única componente aleatória deste algoritmo ser a criação de uma solução inicial, e como todas as iterações realizam alterações em direção à melhor solução, o algoritmo nunca irá testar a mesma solução mais que uma vez, pelo que manter um registo sobre as soluções já testadas não é necessário. Pela mesma razão, o algoritmo é sensível à solução inicial, pelo que será interessante executar o algoritmo várias vezes, de modo a cobrir uma maior área do espaço de soluções, garantido uma maior probabilidade de encontrar uma solução próxima da ótima, ou até a própria.
 
 Este algoritmo pode ser representado em pseudocódigo da seguinte forma:
 
@@ -295,34 +285,37 @@ Este algoritmo pode ser representado em pseudocódigo da seguinte forma:
 \end{algorithmic}
 \end{algorithm}
 
-Através da análise do pseudocódigo, é possível verificar que o algoritmo guloso aleatório, tal como o algoritmo de \textit{Simulated Annealing}, é sensível à solução inicial, pelo que é importante executar o algoritmo várias vezes, para que seja coberta uma maior área do espaço de soluções, garantido uma maior probabilidade de encontrar uma solução próxima da ótima, ou até a própria.
-
-Para além disso, ainda através da análise do pseudocódigo, é possível analisar a complexidade do algoritmo. Pelo facto das operações mais custosas serem o percorrer todos os vértices ($O(n)$) e calcular o novo peso do corte, ao mudar o vértice de partição ($O(m)$), e ambas se encontrarem dentro do ciclo principal, que itera no máximo $m \times \texttt{itLim}$ vezes, a complexidade final do algoritmo é dada por $O(m \times \texttt{itLim} \times n \times m)$. Esta complexidade pode ser reescrita e simplificada de diferentes maneiras, entre elas $O(m^2 \times n)$, visto que \texttt{itLim} é uma constante.
+Através da análise do pseudocódigo é possível analisar a complexidade do algoritmo. Pelo facto das operações mais custosas serem o percorrer todos os vértices ($O(n)$) e calcular o novo peso do corte, ao mudar o vértice de partição ($O(m)$), e ambas se encontrarem dentro do ciclo principal, que itera no máximo $m \times \texttt{itLim}$ vezes, a complexidade final do algoritmo é dada por $O(m \times \texttt{itLim} \times n \times m)$. Esta complexidade pode ser reescrita e simplificada de diferentes maneiras, entre elas $O(m^2 \times n)$, visto que \texttt{itLim} é uma constante.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/ops_Random Greedy.png}
-    \caption{Número de operações básicas efetuadas pelo algoritmo Guloso Aleatório em função do número de arestas, para diferentes valores de \texttt{itLim} (IT).}
+    \caption{Número de operações básicas efetuadas pelo algoritmo Guloso Aleatório em função do número de arestas do grafo, para diferentes valores de \texttt{itLim} (IT).}
     \label{fig:random_greedy}
 \end{figure}
 
-Através da Fig. \ref{fig:random_greedy}, que representa o número de operações básicas efutadas pelo algoritmo em função do número de arestas, para diferentes valores de \texttt{itLim} (IT), é possível validar a complexidade do algoritmo calculada analiticamente. Pode-se observar que as curvas apresentadas, dadas pela função $$f(m, \text{IT}) = m^{2.5} \times \text{IT}$$ conseguem descrever o comportamento do algoritmo para grafos de diferentes dimensões, confirmando a complexidade calculada. É importante referir que a complexidade calculada analiticamente foi simplificada para $O(m^{2.5} \times \texttt{itLim})$, visto que para grafos com maior número de vértices e de arestas, onde é mais interessante aplicar este tipo de algoritmos, tem-se que
+Através da Fig. \ref{fig:random_greedy}, que apresenta o número de operações básicas efutadas pelo algoritmo em função do número de arestas, para diferentes valores de \texttt{itLim} (IT), é possível validar a complexidade do algoritmo calculada analiticamente. Pode-se observar que as curvas apresentadas, dadas pela função
+
+$$f(m) = m^{2.5} \times \text{IT}$$
+
+\noindent conseguem descrever o comportamento do algoritmo para grafos de diferentes dimensões, confirmando a complexidade calculada. É importante referir que a complexidade calculada analiticamente foi simplificada para $O(m^{2.5} \times \texttt{itLim})$, visto que para grafos com maior número de vértices e de arestas, onde é mais interessante aplicar este tipo de algoritmos, tem-se que
 
 $$m \approx \frac{n(n-1)}{2} \Rightarrow n \approx \sqrt{m}$$
+
+Quanto ao número de soluções testadas, a partir da análise do pseudocódigo, é possível verificar que o número é variável, devido à natureza do algoritmo. Sempre que é encontrada uma solução melhor que a atual, no algoritmo, este termina a iteração que está a ser efetuada, sem testar mais soluções, pelo que se um dos primeiros vértices testados melhorar a solução, o algoritmo não irá testar os restantes, fazendo com que sejam testadas menos soluções. De qualquer forma, é possível verificar que o número de soluções testadas nunca será superior a $m \times \texttt{itLim} \times n$, visto que a cada iteração do ciclo principal ($m \times \texttt{itLim}$ iterações máximas), são testadas no máximo $n$ soluções (testar todos os vértices). Na Fig. \ref{fig:sols_randomgreedy} é validada a análise feita, onde é apresentado o número de soluções testadas em função do número de arestas do grafo e a função $f(m) = m^{1.5} \times \text{IT}$, para diferentes valores de \texttt{itLim} (IT). É de notar que foi utilizada mais uma vez a aproximação $n \approx \sqrt{m}$.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/sols_Random Greedy.png}
-    \caption{captio caption caption}
+    \caption{Número de soluções testadas pelo algoritmo Guloso Aleatório em função do número de arestas do grafo, para diferentes valores de \texttt{itLim} (IT). As curvas apresentadas são dadas por $f(m) = m^{1.5} \times \text{IT}$.}
     \label{fig:sols_randomgreedy}
 \end{figure}
 
-
-
-
 \section{Análise dos Resultados}
 
-Definido e analisada a complexidade de cada algoritmo, torna-se importante analisar as restantes métricas relevantes, tais como o tempo de execução, o número de operações básicas realizadas, o número de soluções testadas, a precisão das soluções obtidas.
+% AQUIII
+
+Definida e analisada a complexidade de cada algoritmo, torna-se importante analisar as restantes métricas relevantes, tais como o tempo de execução, o número de operações básicas realizadas, o número de soluções testadas, a precisão das soluções obtidas.
 % reordenar com as subsecçoes, e ops basicas ja foram feitas antes
 % dizer q tbm se vai ver heur e exaustivo do report 01 ?
 
