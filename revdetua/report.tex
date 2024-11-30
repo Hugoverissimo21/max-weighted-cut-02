@@ -21,6 +21,7 @@
 \usepackage{graphicx}
 \usepackage[justification=centering]{caption}
 \usepackage{float}
+\usepackage{booktabs}
 %-------------------------------------
 % compiling:
 % Recipe: xelatex
@@ -133,11 +134,11 @@ Pode-se observar que a parte computacionalmente mais custosa deste algoritmo é 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/ops_Random Sol.png}
-    \caption{camptionsdasid8}
+    \caption{Número de operações básicas efetuadas pelo algoritmo de Corte Aleatório em função do número de arestas, para diferentes valores de \texttt{solutions} (MS).}
     \label{fig:random_ops}
 \end{figure}
 
-A complexidade referida é confirmada pela análise experimental apresentada na figura \ref{fig:random_ops}, onde se pode observar que o número de de operações básicas realizadas é linear em relação ao número de arestas do grafo, para diferentes números de soluções geradas.
+A complexidade referida é confirmada pela análise experimental apresentada na Fig. \ref{fig:random_ops}, onde se pode observar que o número de de operações básicas realizadas é linear em relação ao número de arestas do grafo, para diferentes números de soluções geradas.
 
 % dizer q é m * solutions no grafico e q os pontos acima do reta tem a ver com qnd o m não é mt maior q n, mas que em grafos densos pronto
 
@@ -151,12 +152,12 @@ O segundo algoritmo a ser implementado é o algoritmo de \textit{Simulated Annea
 
 Assim, é possível verificar que este algortimo tem como componente aleatória a seleção de uma solução inicial e a aceitação de soluções piores, e como parte determinística a diminuição da probabilidade de aceitação de soluções piores ao longo das iterações e a garantia de aceitação de soluções melhores.
 
-Na figura \ref{fig:sa_aceitacao}, pode-se observar o comportamento decrescente da probabilidade de aceitação de soluções piores ao longo das iterações do algoritmo SA. Os pontos cinzentos representam números aleatórios gerados dentro do intervalo $[0,1]$ a cada iteração. A proposta de uma nova solução é aceite se esta for melhor que a solução atual ou se o valor aleatório (ponto cinzento) estiver abaixo da "curva" definida pelos pontos azuis. Esta curva reflete a probabilidade de aceitação, que diminui à medida que a temperatura decresce, limitando cada vez mais a aceitação de soluções subótimas.
+Na Fig. \ref{fig:sa_aceitacao}, pode-se observar o comportamento decrescente da probabilidade de aceitação de soluções piores ao longo das iterações do algoritmo SA. Os pontos cinzentos representam números aleatórios gerados dentro do intervalo $[0,1]$ a cada iteração. A proposta de uma nova solução é aceite se esta for melhor que a solução atual ou se o valor aleatório (ponto cinzento) estiver abaixo da "curva" definida pelos pontos azuis. Esta curva reflete a probabilidade de aceitação, que diminui à medida que a temperatura decresce, limitando cada vez mais a aceitação de soluções subótimas.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/SA_DecrAceit.png}
-    \caption{Probabilidade de aceitação de uma solução subótima, em função do número de iterações, quando o SA é aplicado com a semente $124348$, ao grafo G59.}
+    \caption{Probabilidade de aceitação de uma solução subótima, em função do número de iterações, quando o algoritmo de SA é aplicado com a semente $124348$, ao grafo G59.}
     \label{fig:sa_aceitacao}
 \end{figure}
 
@@ -226,12 +227,12 @@ Para além disso, através do pseudocódigo, é possível analisar a complexidad
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/ops_Simulated .png}
-    \caption{camptionsdasid8}
+    \caption{Número de operações básicas efetuadas pelo algoritmo de SA em função do número de arestas, para diferentes valores de \texttt{Temp} (T) e de \texttt{cooling\_rate} (CR).}
     \label{fig:sa_ops}
 \end{figure}
 
 
-Através da figura \ref{fig:sa_ops} que representa o número de operações básicas realizadas em função do número de arestas do grafo, para diferentes temperaturas iniciais e taxas de arrefecimento, pode-se verificar que a complexidade do algoritmo é linear em relação ao número de arestas do grafo, para diferentes temperaturas iniciais e taxas de arrefecimento.
+Através da Fig. \ref{fig:sa_ops} que representa o número de operações básicas realizadas em função do número de arestas do grafo, para diferentes temperaturas iniciais e taxas de arrefecimento, pode-se verificar que a complexidade do algoritmo é linear em relação ao número de arestas do grafo, para diferentes temperaturas iniciais e taxas de arrefecimento.
 
 % falar a dizer q t maior implica... e cr maior implica ...
 
@@ -285,30 +286,66 @@ Este algoritmo pode ser representado em pseudocódigo da seguinte forma:
 \end{algorithmic}
 \end{algorithm}
 
-% AQUIIIIIIIII
+Através da análise do pseudocódigo, é possível verificar que o algoritmo guloso aleatório, tal como o algoritmo de \textit{Simulated Annealing}, é sensível à solução inicial, pelo que é importante executar o algoritmo várias vezes, para que seja coberta uma maior área do espaço de soluções, garantido uma maior probabilidade de encontrar uma solução próxima da ótima, ou até a própria.
 
-como o algoritmo é guloso, a solucao final depende da solucao inicial, gerada aleatoriamente, e por isso o algoritmo deve ser corrido varias vezes, para garantir uma maior probabilidade a melhor solucao é encontrada
-    
-quanto a compelxidade, gerar a particao inicial e calcular o seu peso é O(n + m), pq corre a lista de vertices e a lista de arestas
+Para além disso, ainda através da análise do pseudocódigo, é possível analisar a complexidade do algoritmo. Pelo facto das operações mais custosas serem o percorrer todos os vértices ($O(n)$) e calcular o novo peso do corte, ao mudar o vértice de partição ($O(m)$), e ambas se encontrarem dentro do ciclo principal, que itera no máximo $m \times \texttt{itLim}$ vezes, a complexidade final do algoritmo é dada por $O(m \times \texttt{itLim} \times n \times m)$. Esta complexidade pode ser reescrita e simplificada de diferentes maneiras, entre elas $O(m^2 \times n)$, visto que \texttt{itLim} é uma constante.
 
-depois com o ciclo, ira correr no maximo O(itLim x m) e dentro dele a compelxidade é O(n) por correr os nós todos x O(m) por calcular o peso a cada vertice q passa
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/ops_Random Greedy.png}
+    \caption{Número de operações básicas efetuadas pelo algoritmo Guloso Aleatório em função do número de arestas, para diferentes valores de \texttt{itLim} (IT).}
+    \label{fig:random_greedy}
+\end{figure}
 
-logo a complixidade final é $O(m \times \texttt{itLim} \times n \times m)$ que tende para $O(n^5)$ para grafos densos
+Através da Fig. \ref{fig:random_greedy}, que representa o número de operações básicas efutadas pelo algoritmo em função do número de arestas, para diferentes valores de \texttt{itLim} (IT), é possível validar a complexidade do algoritmo calculada analiticamente. Pode-se observar que as curvas apresentadas, dadas pela função $$f(m, \text{IT}) = m^{2.5} \times \text{IT}$$ conseguem descrever o comportamento do algoritmo para grafos de diferentes dimensões, confirmando a complexidade calculada. É importante referir que a complexidade calculada analiticamente foi simplificada para $O(m^{2.5} \times \texttt{itLim})$, visto que para grafos com maior número de vértices e de arestas, onde é mais interessante aplicar este tipo de algoritmos, tem-se que
+
+$$m \approx \frac{n(n-1)}{2} \Rightarrow n \approx \sqrt{m}$$
+
+
 
 
 \section{Análise dos Resultados}
 
-Compare the results of the experimental and the formal analysis.
+Definido e analisada a complexidade de cada algoritmo, torna-se importante analisar as restantes métricas relevantes, tais como o tempo de execução, o número de operações básicas realizadas, o número de soluções testadas, a precisão das soluções obtidas.
+% reordenar com as subsecçoes, e ops basicas ja foram feitas antes
+% dizer q tbm se vai ver heur e exaustivo do report 01 ?
 
-todos os grafos devem ser corridos pelo menos 5 vezes, e a media dos resultados deve ser calculada e mediana do tempo , por causa dos tempos e da aleatoriedade dos resultados
+Para esta análise, foram utlizados grafos gerados aleatoriamente com a semente $124348$ e os grafos do conjunto \textit{Gset}. Entre os diferentes grafos, podem ser encontrados diversos números de vértices e densidades de arestas, garantindo a representação de uma ampla gama de configurações estruturais e cenários computacionais.
 
-Graphs for the Computational Experiments: mine and elearnig and gset
+Dada a componente estocástica dos algoritmos, para assegurar resultados mais precisos e consistentes, cada grafo foi processado múltiplas vezes, calculando-se a média para as diferentes métricas (número de operações básicas, precisão, etc.), com exceção do tempo de execução, para o qual foi calculado a mediana. A escolha da mediana para esta métrica deve-se à sua robustez contra valores atípicos que podem surgir devido à falta de controlo sobre o ambiente de execução dos algoritmos.
 
-asdasds
 
-\subsection{(1) the number of basic operations carried out}
+\subsection{Análise do Número de Operações}
 
-dsadasds
+Atendendo ao número de operações básicas que um algoritmo executa, esta métrica ao estar diretamente relacionado com a complexidade de um algoritmo, já foi analisada anteriormente, na secção correspondente a cada algoritmo, de modo a validar a complexidade calculada formalmente.
+
+Na tabela \ref{table:numops}, pode-se observar a complexidade dos algoritmos em função do número de operações básicas, permitindo a comparação da eficiência computacional entre os diferentes algoritmos implementados.
+
+\begin{table}[H]
+\centering
+\caption{Complexidade dos algoritmos pelo número de operações básicas.}
+\label{table:numops}
+\begin{tabular}{ll}
+\toprule
+\textbf{Algoritmo} & \textbf{Complexidade} \\
+\midrule
+Pesquisa Exaustiva & $O(2^n)$ \\
+Pesquisa Gulosa & $O(m \log m)$ \\
+Corte Aleatório & $O(m)$ \\
+Simulated Annealing & $O(m)$ \\
+Guloso Aleatório & $O(m^2 \times n)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Tendo em conta que para grafos de maiores dimensões, com elevado número de arestas, a relação entre $n$ e $m$ é dada por $n^2 \approx m$, torna-se possível realizar a seguinte visualização
+
+...
+
+PLOT COMPLEXIDADES EM FUNCAO DE N
+
+ns q ve se q ns qm sobe mais e isso
+
 
 \subsection{2 the execution time }
 
@@ -318,17 +355,36 @@ dsadasds
 
 dsadasd
 
-\subsection{solution}
 
-asdad
+\subsection{(3) the number of solutions / configurations tested}
 
-\subsubsection{(3) the number of solutions / configurations tested}
+sadsad 
 
-sadsad
+\subsection{precision}
 
-\subsubsection{precision}
+E METER TBM STDV !!!
 
-asdasd
+\begin{table}[H]
+\centering
+\caption{caption caption caption caption}
+\label{table:precision}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Algoritmo} & \textbf{GPeq. Prec.} & \textbf{GSet Prec.} \\
+\midrule
+Nome do algoritmo & $32\%$ & $32\%$ \\
+Nome do algoritmo & $32\%$ & $32\%$ \\
+SA (t: 1000, cr: 0.99) & $32\%$ & $32\%$ \\
+Nome do algoritmo & $32\%$ & $32\%$ \\
+Nome do algoritmo & $32\% \ (4.3)$ & $32\% \ (4.3)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Conclusão}
+
+dhaushdisu
 
 
 

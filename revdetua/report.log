@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.20)  29 NOV 2024 21:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.20)  30 NOV 2024 13:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -197,39 +197,58 @@ See the caption package documentation for explanation.
 \c@caption@flags=\count288
 \c@continuedfloat=\count289
 Package caption Info: float package is loaded.
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen163
+\lightrulewidth=\dimen164
+\cmidrulewidth=\dimen165
+\belowrulesep=\dimen166
+\belowbottomsep=\dimen167
+\aboverulesep=\dimen168
+\abovetopsep=\dimen169
+\cmidrulesep=\dimen170
+\cmidrulekern=\dimen171
+\defaultaddspace=\dimen172
+\@cmidla=\count290
+\@cmidlb=\count291
+\@aboverulesep=\dimen173
+\@belowrulesep=\dimen174
+\@thisruleclass=\count292
+\@lastruleclass=\count293
+\@thisrulewidth=\dimen175
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
+\l__color_backend_stack_int=\count294
 \l__pdf_internal_box=\box56
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen163
+\scratchcounter=\count295
+\scratchdimen=\dimen176
 \scratchbox=\box57
-\nofMPsegments=\count292
-\nofMParguments=\count293
+\nofMPsegments=\count296
+\nofMParguments=\count297
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen164
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen177
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
 \everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -240,119 +259,119 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Underfull \hbox (badness 2495) in paragraph at lines 47--49
+Underfull \hbox (badness 2495) in paragraph at lines 48--50
 []\OT1/cmr/bx/it/9 Resumo \OT1/cmr/bx/n/9 -- Este re-lat^^Sorio apre-senta a im-ple-
  []
 
 
 
 
-Underfull \hbox (badness 3838) in paragraph at lines 87--88
+Underfull \hbox (badness 3838) in paragraph at lines 88--89
 []\OT1/cmr/m/n/10 Pelo facto do al-go-ritmo ge-rar mui-tas solu^^Xc~oes
  []
 
 
-Underfull \hbox (badness 10000) detected at line 106
+Underfull \hbox (badness 10000) detected at line 107
 \OT1/cmr/m/n/8 1:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 107
+Underfull \hbox (badness 10000) detected at line 108
 \OT1/cmr/m/n/8 2:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 108
+Underfull \hbox (badness 10000) detected at line 109
 \OT1/cmr/m/n/8 3:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 109
+Underfull \hbox (badness 10000) detected at line 110
 \OT1/cmr/m/n/8 4:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 110
+Underfull \hbox (badness 10000) detected at line 111
 \OT1/cmr/m/n/8 5:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 111
+Underfull \hbox (badness 10000) detected at line 112
 \OT1/cmr/m/n/8 6:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 112
+Underfull \hbox (badness 10000) detected at line 113
 \OT1/cmr/m/n/8 7:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 113
+Underfull \hbox (badness 10000) detected at line 114
 \OT1/cmr/m/n/8 8:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 114
+Underfull \hbox (badness 10000) detected at line 115
 \OT1/cmr/m/n/8 9:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 115
+Underfull \hbox (badness 10000) detected at line 116
 \OT1/cmr/m/n/8 10:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 116
+Underfull \hbox (badness 10000) detected at line 117
 \OT1/cmr/m/n/8 11:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 117
+Underfull \hbox (badness 10000) detected at line 118
 \OT1/cmr/m/n/8 12:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 118
+Underfull \hbox (badness 10000) detected at line 119
 \OT1/cmr/m/n/8 13:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 119
+Underfull \hbox (badness 10000) detected at line 120
 \OT1/cmr/m/n/8 14:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 120
+Underfull \hbox (badness 10000) detected at line 121
 \OT1/cmr/m/n/8 15:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 121
+Underfull \hbox (badness 10000) detected at line 122
 \OT1/cmr/m/n/8 16:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 122
+Underfull \hbox (badness 10000) detected at line 123
 \OT1/cmr/m/n/8 17:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 123
+Underfull \hbox (badness 10000) detected at line 124
 \OT1/cmr/m/n/8 18:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 124
+Underfull \hbox (badness 10000) detected at line 125
 \OT1/cmr/m/n/8 19:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 125
+Underfull \hbox (badness 10000) detected at line 126
 \OT1/cmr/m/n/8 20:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 126
+Underfull \hbox (badness 10000) detected at line 127
 \OT1/cmr/m/n/8 21:
  []
 
@@ -370,140 +389,138 @@ Non-PDF special ignored!
 <../assets/ops_Random Sol.png, id=23, 361.35pt x 289.08pt>
 File: ../assets/ops_Random Sol.png Graphic file (type png)
 <use ../assets/ops_Random Sol.png>
-Package pdftex.def Info: ../assets/ops_Random Sol.png  used on input line 135.
+Package pdftex.def Info: ../assets/ops_Random Sol.png  used on input line 136.
 (pdftex.def)             Requested size: 222.78355pt x 178.22644pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 1400) in paragraph at lines 152--153
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 153--154
 \OT1/cmr/m/n/10 ini-cial e a aceita^^Xc~ao de solu^^Xc~oes pi-o-res, e como
  []
 
 <../assets/SA_DecrAceit.png, id=25, 361.35pt x 289.08pt>
 File: ../assets/SA_DecrAceit.png Graphic file (type png)
 <use ../assets/SA_DecrAceit.png>
-Package pdftex.def Info: ../assets/SA_DecrAceit.png  used on input line 158.
+Package pdftex.def Info: ../assets/SA_DecrAceit.png  used on input line 159.
 (pdftex.def)             Requested size: 222.78355pt x 178.22644pt.
 
 
-[2 <../assets/ops_Random Sol.png> <../assets/SA_DecrAceit.png>]
-Underfull \hbox (badness 10000) detected at line 185
+[2 <../assets/ops_Random Sol.png>]
+Underfull \hbox (badness 10000) detected at line 186
 \OT1/cmr/m/n/8 1:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 186
+Underfull \hbox (badness 10000) detected at line 187
 \OT1/cmr/m/n/8 2:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 187
+Underfull \hbox (badness 10000) detected at line 188
 \OT1/cmr/m/n/8 3:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 188
+Underfull \hbox (badness 10000) detected at line 189
 \OT1/cmr/m/n/8 4:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 189
+Underfull \hbox (badness 10000) detected at line 190
 \OT1/cmr/m/n/8 5:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 190
+Underfull \hbox (badness 10000) detected at line 191
 \OT1/cmr/m/n/8 6:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 191
+Underfull \hbox (badness 10000) detected at line 192
 \OT1/cmr/m/n/8 7:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 192
+Underfull \hbox (badness 10000) detected at line 193
 \OT1/cmr/m/n/8 8:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 193
+Underfull \hbox (badness 10000) detected at line 194
 \OT1/cmr/m/n/8 9:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 194
+Underfull \hbox (badness 10000) detected at line 195
 \OT1/cmr/m/n/8 10:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 196
+Underfull \hbox (badness 10000) detected at line 197
 \OT1/cmr/m/n/8 11:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 197
+Underfull \hbox (badness 10000) detected at line 198
 \OT1/cmr/m/n/8 12:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 198
+Underfull \hbox (badness 10000) detected at line 199
 \OT1/cmr/m/n/8 13:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 199
+Underfull \hbox (badness 10000) detected at line 200
 \OT1/cmr/m/n/8 14:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 200
+Underfull \hbox (badness 10000) detected at line 201
 \OT1/cmr/m/n/8 15:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 201
+Underfull \hbox (badness 10000) detected at line 202
 \OT1/cmr/m/n/8 16:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 203
+Underfull \hbox (badness 10000) detected at line 204
 \OT1/cmr/m/n/8 17:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 204
+Underfull \hbox (badness 10000) detected at line 205
 \OT1/cmr/m/n/8 18:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 205
+Underfull \hbox (badness 10000) detected at line 206
 \OT1/cmr/m/n/8 19:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 206
+Underfull \hbox (badness 10000) detected at line 207
 \OT1/cmr/m/n/8 20:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 207
+Underfull \hbox (badness 10000) detected at line 208
 \OT1/cmr/m/n/8 21:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 208
+Underfull \hbox (badness 10000) detected at line 209
 \OT1/cmr/m/n/8 22:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 209
+Underfull \hbox (badness 10000) detected at line 210
 \OT1/cmr/m/n/8 23:
- []
-
-
-Underfull \hbox (badness 4569) in paragraph at lines 215--216
-\OT1/cmr/m/n/10 As opera^^Xc~oes com-pu-ta-ci-o-nal-mente mais cus-to-sas
  []
 
 
@@ -511,141 +528,177 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-<../assets/ops_Simulated .png, id=33, 361.35pt x 289.08pt>
+
+Underfull \hbox (badness 4569) in paragraph at lines 216--217
+\OT1/cmr/m/n/10 As opera^^Xc~oes com-pu-ta-ci-o-nal-mente mais cus-to-sas
+ []
+
+<../assets/ops_Simulated .png, id=32, 361.35pt x 289.08pt>
 File: ../assets/ops_Simulated .png Graphic file (type png)
 <use ../assets/ops_Simulated .png>
-Package pdftex.def Info: ../assets/ops_Simulated .png  used on input line 228.
+Package pdftex.def Info: ../assets/ops_Simulated .png  used on input line 229.
 (pdftex.def)             Requested size: 222.78355pt x 178.22644pt.
 
 
-[3 <../assets/ops_Simulated .png>]
-Underfull \hbox (badness 2088) in paragraph at lines 247--248
+[3 <../assets/SA_DecrAceit.png>]
+Underfull \hbox (badness 2088) in paragraph at lines 248--249
 []\OT1/cmr/m/n/10 Este al-go-ritmo pode ser re-pre-sen-tado em pseu-
  []
 
 
-Underfull \hbox (badness 10000) detected at line 262
+Underfull \hbox (badness 10000) detected at line 263
 \OT1/cmr/m/n/8 1:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 263
+Underfull \hbox (badness 10000) detected at line 264
 \OT1/cmr/m/n/8 2:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 264
+Underfull \hbox (badness 10000) detected at line 265
 \OT1/cmr/m/n/8 3:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 265
+Underfull \hbox (badness 10000) detected at line 266
 \OT1/cmr/m/n/8 4:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 267
+Underfull \hbox (badness 10000) detected at line 268
 \OT1/cmr/m/n/8 5:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 268
+Underfull \hbox (badness 10000) detected at line 269
 \OT1/cmr/m/n/8 6:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 269
+Underfull \hbox (badness 10000) detected at line 270
 \OT1/cmr/m/n/8 7:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 270
+Underfull \hbox (badness 10000) detected at line 271
 \OT1/cmr/m/n/8 8:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 271
+Underfull \hbox (badness 10000) detected at line 272
 \OT1/cmr/m/n/8 9:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 272
+Underfull \hbox (badness 10000) detected at line 273
 \OT1/cmr/m/n/8 10:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 273
+Underfull \hbox (badness 10000) detected at line 274
 \OT1/cmr/m/n/8 11:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 274
+Underfull \hbox (badness 10000) detected at line 275
 \OT1/cmr/m/n/8 12:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 275
+Underfull \hbox (badness 10000) detected at line 276
 \OT1/cmr/m/n/8 13:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 276
+Underfull \hbox (badness 10000) detected at line 277
 \OT1/cmr/m/n/8 14:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 277
+Underfull \hbox (badness 10000) detected at line 278
 \OT1/cmr/m/n/8 15:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 278
+Underfull \hbox (badness 10000) detected at line 279
 \OT1/cmr/m/n/8 16:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 279
+Underfull \hbox (badness 10000) detected at line 280
 \OT1/cmr/m/n/8 17:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 280
+Underfull \hbox (badness 10000) detected at line 281
 \OT1/cmr/m/n/8 18:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 282
+Underfull \hbox (badness 10000) detected at line 283
 \OT1/cmr/m/n/8 19:
  []
 
 
-Underfull \hbox (badness 10000) detected at line 283
+Underfull \hbox (badness 10000) detected at line 284
 \OT1/cmr/m/n/8 20:
  []
 
 
+Underfull \vbox (badness 1953) has occurred while \output is active []
 
-(./report.bbl)
 
-[4] (./report.aux)
+
+<../assets/ops_Random Greedy.png, id=39, 361.35pt x 289.08pt>
+File: ../assets/ops_Random Greedy.png Graphic file (type png)
+<use ../assets/ops_Random Greedy.png>
+Package pdftex.def Info: ../assets/ops_Random Greedy.png  used on input line 295.
+(pdftex.def)             Requested size: 222.78355pt x 178.22644pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[4 <../assets/ops_Simulated .png>]
+Underfull \hbox (badness 1394) in paragraph at lines 315--316
+\OT1/cmr/m/n/10 a m^^Sedia para as di-fe-ren-tes m^^Setricas (n^^Sumero de
+ []
+
+
+
+
+Overfull \hbox (12.17513pt too wide) in paragraph at lines 371--382
+ [][] 
+ []
+
+(./report.bbl
+
+[5 <../assets/ops_Random Greedy.png>])
+
+
+
+[6
+
+] (./report.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5517 strings out of 473579
- 94132 string characters out of 5728228
- 1949957 words of memory out of 5000000
- 28362 multiletter control sequences out of 15000+600000
+ 5603 strings out of 473579
+ 95710 string characters out of 5728228
+ 1946957 words of memory out of 5000000
+ 28444 multiletter control sequences out of 15000+600000
  565582 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,14n,66p,905b,430s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,14n,66p,905b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on report.pdf (4 pages, 4050906 bytes).
+Output written on report.pdf (6 pages, 6235690 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

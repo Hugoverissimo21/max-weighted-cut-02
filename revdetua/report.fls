@@ -69,6 +69,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./report.aux
@@ -128,6 +130,11 @@ INPUT ../assets/ops_Simulated .png
 INPUT ../assets/ops_Simulated .png
 INPUT ../assets/ops_Simulated .png
 INPUT ../assets/ops_Simulated .png
+INPUT ../assets/ops_Random Greedy.png
+INPUT ../assets/ops_Random Greedy.png
+INPUT ../assets/ops_Random Greedy.png
+INPUT ../assets/ops_Random Greedy.png
+INPUT ../assets/ops_Random Greedy.png
 INPUT ./report.bbl
 INPUT ./report.bbl
 INPUT report.bbl
