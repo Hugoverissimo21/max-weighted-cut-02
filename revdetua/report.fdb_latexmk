@@ -1,24 +1,24 @@
 # Fdb version 4
-["bibtex report"] 1732997215.16117 "report.aux" "report.bbl" "report" 1732998510.3388 0
+["bibtex report"] 1733010253.67116 "report.aux" "report.bbl" "report" 1733013931.6367 0
   "./p-revdetua.bst" 1326997358 15609 44ecfa447d812c289732ae87d3faed4d ""
   "./refs.bib" 1732903195.71531 1120 35e40464929a8a0436bc9b8bc0d8c4bc ""
-  "report.aux" 1732998510.07823 1019 1c9f350814f6344d0fda930cf781123c "pdflatex"
+  "report.aux" 1733013931.38235 1019 8b38e9691d72b1794cc15352a62e8cca "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1732998488.59303 "/Users/hugover/Desktop/AA02/revdetua/report.tex" "report.pdf" "report" 1732998510.33891 0
+["pdflatex"] 1733013910.01905 "/Users/hugover/Desktop/AA02/revdetua/report.tex" "report.pdf" "report" 1733013931.63683 0
   "../assets/SA_DecrAceit.png" 1732406312.47532 4378840 9b5441da486bc9768649bf6d59cc6e19 ""
-  "../assets/basicops.png" 1732982966.27019 545426 f02bbc4aea49532ecbc7d6d8ddcd1733 ""
-  "../assets/ops_Random Greedy.png" 1732982980.02213 750544 48a40976cdd7e85372b975378bdffd0e ""
-  "../assets/ops_Random Sol.png" 1732982959.90256 543799 fb6c7562c1c1e94f1536831292da801a ""
-  "../assets/ops_Simulated .png" 1732982957.91767 716907 7b1bd3390e04300b55ccc74e55f2ed31 ""
-  "../assets/sols_Random Greedy.png" 1732982972.94319 826965 b965eb3aaa73a62e53ece3551b328017 ""
-  "../assets/sols_Random Sol.png" 1732982968.54581 462561 4b99ac127aeb3f9331d384287520770a ""
-  "../assets/sols_Simulated .png" 1732982970.61446 435846 36fa2581b07ce49c7ee3ba69c252ffe5 ""
-  "../assets/time_all.png" 1732982975.47605 2003373 0021fdabbd625fb1341276216e91f664 ""
-  "../assets/time_interval.png" 1732982977.88131 2315003 f1cc13f22adebf8d7f58ccfb389188fc ""
-  "/Users/hugover/Desktop/AA02/revdetua/report.tex" 1732998488.35939 29571 30ad7c824518281ce8d1196ad6251a73 ""
+  "../assets/basicops.png" 1733005294.22168 545426 f02bbc4aea49532ecbc7d6d8ddcd1733 ""
+  "../assets/ops_Random Greedy.png" 1733005290.04043 750544 48a40976cdd7e85372b975378bdffd0e ""
+  "../assets/ops_Random Sol.png" 1733005287.83966 543799 fb6c7562c1c1e94f1536831292da801a ""
+  "../assets/ops_Simulated .png" 1733005285.83205 716907 7b1bd3390e04300b55ccc74e55f2ed31 ""
+  "../assets/sols_Random Greedy.png" 1733005300.62461 826965 b965eb3aaa73a62e53ece3551b328017 ""
+  "../assets/sols_Random Sol.png" 1733005296.40861 462561 4b99ac127aeb3f9331d384287520770a ""
+  "../assets/sols_Simulated .png" 1733005298.3722 435846 36fa2581b07ce49c7ee3ba69c252ffe5 ""
+  "../assets/time_all.png" 1733005395.95411 2007630 71f9d33996be5c2675a01b8f0175522a ""
+  "../assets/time_interval.png" 1733007978.90404 2318447 510686dad155d1d761f752b5829b1d61 ""
+  "/Users/hugover/Desktop/AA02/revdetua/report.tex" 1733013909.79939 36400 56911905562785d246ac300a6d9d9fc3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -103,9 +103,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1724153806 5498206 6c0f03cb370063b7ddbd563e5f9ce23a ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1724153954 8239412 02a25d85eb128426e9965e27e7615548 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "report.aux" 1732998510.07823 1019 1c9f350814f6344d0fda930cf781123c "pdflatex"
-  "report.bbl" 1732997215.25413 882 8ae19235c4f30fdad3251b6d9fb5966f "bibtex report"
-  "report.tex" 1732998488.35939 29571 30ad7c824518281ce8d1196ad6251a73 ""
+  "report.aux" 1733013931.38235 1019 8b38e9691d72b1794cc15352a62e8cca "pdflatex"
+  "report.bbl" 1733010253.76271 882 8ae19235c4f30fdad3251b6d9fb5966f "bibtex report"
+  "report.tex" 1733013909.79939 36400 56911905562785d246ac300a6d9d9fc3 ""
   "revdetua.cls" 1348080372 24164 8b1d9d26252f6b3f92c4a1888d855feb ""
   (generated)
   "report.aux"
