@@ -29,7 +29,7 @@
 % Recipe: xelatex
 %
 % notas:
-% rever se algorimtos e imagens estão onde devem
+% rever se algoritmos e imagens estão onde devem
 %-------------------------------------
 \begin{document}
 
@@ -44,20 +44,24 @@ This report presents the implementation and comparison of three randomized algor
 \end{abstract}
 
 \begin{resumo}
-Este relatório apresenta a implementação e comparação de três algoritmos aleatorizados para resolver o problema do \textit{Maximum Weight Cut}: um algoritmo de corte aleatório, um algoritmo de \textit{Simulated Annealing} e um algoritmo guloso aleatório. O problema consiste em dividir um grafo em dois subconjuntos complementares de modo a maximizar a soma dos pesos das arestas que ligam os dois subconjuntos. A análise dos algoritmos foi realizada com base em diferentes métricas, tais como número de operações básicas, tempo de execução e precisão das soluções obtidas, em grafos de diferentes dimensões. Os resultados mostram um equilíbrio entre a complexidade computacional e a qualidade da solução, indicando que a escolha do algoritmo mais adequado depende das características específicas de cada problema.
+Este relatório apresenta a implementação e comparação de três algoritmos aleatorizados para resolver o problema do \textit{Maximum Weight Cut}: um algoritmo de Corte Aleatório, um algoritmo de \textit{Simulated Annealing} e um algoritmo Guloso Aleatório. O problema consiste em dividir um grafo em dois subconjuntos complementares de modo a maximizar a soma dos pesos das arestas que ligam os dois subconjuntos. A análise dos algoritmos foi realizada com base em diferentes métricas, tais como número de operações básicas, tempo de execução e precisão das soluções obtidas, em grafos de diferentes dimensões. Os resultados mostram um equilíbrio entre a complexidade computacional e a qualidade da solução, indicando que a escolha do algoritmo mais adequado depende das características específicas de cada problema.
 \end{resumo}
-
-
-
 
 
 \section{Introdução}
 
 O problema \textit{Maximum Weight Cut} é um problema de otimização, que tem como objetivo encontrar o corte mais pesado num grafo não direcionado $G(V,E)$, onde $|V| = n$ vértices e $|E| = m$ arestas. Este corte envolve dividir os vértices do grafo em dois subconjuntos disjuntos $S$ e $T$, sendo que o peso do corte é a soma dos pesos das arestas que ligam os vértices de $S$ aos vértices de $T$: $|E(S, T)|$ \cite{AG14}.
 
-No passado relatório foram analisados algoritmos determinísticos para resolver o problema \textit{Maximum Weight Cut}, nomeadamente a pesquisa exaustiva e a heurística gulosa. Neste relatório, serão analisados novos algoritmos com um certo grau de aleatoriedade, com o objetivo de encontrar um algortimo que otimize o equilíbrio entre a complexidade computacional e a qualidade da solução obtida. Os algoritmos a serem analisados são o algoritmo de corte aleatório, o algoritmo de \textit{Simulated Annealing} e o algoritmo guloso aleatório.
+No passado relatório foram analisados algoritmos determinísticos para resolver o problema \textit{Maximum Weight Cut}, nomeadamente a Pesquisa Exaustiva e a heurística gulosa. Neste relatório, serão analisados novos algoritmos com um certo grau de aleatoriedade, com o objetivo de encontrar um algoritmo que otimize o equilíbrio entre a complexidade computacional e a qualidade da solução obtida. Os algoritmos a serem analisados são o algoritmo de Corte Aleatório, o algoritmo de \textit{Simulated Annealing} e o algoritmo Guloso Aleatório.
 
 Para além disso, será também analisada a complexidade de cada algoritmo, o número de operações básicas realizadas, o tempo de execução, o número de soluções testadas e a precisão das soluções obtidas, com o intuito de comparar os diferentes algoritmos e determinar o mais eficiente e eficaz para resolver o problema em questão. Os resultados alcançados com estes novos algoritmos, serão também comparados com os resultados obtidos com os algoritmos determinísticos, analisados no relatório anterior.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../assets/exampGraph.png}
+    \caption{Exemplo ilustrativo da aplicação dos algoritmos de Corte Aleatório, \textit{Simulated Annealing} e Guloso Aleatório, ao grafo \textit{0004\_500.graphml}, pela respetiva ordem. Note-se que os parâmetros foram ajustados para fins demonstrativos, pelo que os resultados apresentados podem não corresponder aos reais.}
+    \label{fig:exemplografos}
+\end{figure}
 
 \section{Metodologia da Análise}
 
@@ -69,9 +73,9 @@ Para a realização da análise dos algoritmos criados, foram utilizados grafos 
 
 \section{Algoritmo de Corte Aleatório}
 
-O primeiro algoritmo a ser implementado foi um algoritmo de corte aleatório, que consiste em gerar várias soluções aleatórias, comparar as mesmas e escolher a melhor entre elas \cite{AG14}.
+O primeiro algoritmo a ser implementado foi um algoritmo de Corte Aleatório, que consiste em gerar várias soluções aleatórias, comparar as mesmas e escolher a melhor entre elas \cite{AG14}.
 
-Este é um algortimo computacionalmente leve, pela sua simplicidade, mas não garante a obtenção da solução ótima, devido à sua natureza aleatória, sendo que a probabilidade de encontrar a mesma, assumindo que é única, é dada por
+Este é um algoritmo computacionalmente leve, pela sua simplicidade, mas não garante a obtenção da solução ótima, devido à sua natureza aleatória, sendo que a probabilidade de encontrar a mesma, assumindo que é única, é dada por
 
 $$1 - \left( 1 - \frac{1}{2^{n-1}} \right)^{solutions}$$
 
@@ -209,7 +213,6 @@ Para além disso, através do pseudocódigo, é possível analisar a complexidad
 
 \begin{align*}
     &\texttt{Temp}_0 \cdot (\texttt{cooling\_rate})^k \le 10^{-3} \\
-    \Leftrightarrow\ &  k \geq  \frac{\log\left(\frac{10^{-3}}{\texttt{Temp}_0}\right)}{\log(\texttt{cooling\_rate})} \\
     \Leftrightarrow\ & k = \left\lceil \frac{\log\left(\frac{10^{-3}}{\texttt{Temp}_0}\right)}{\log(\texttt{cooling\_rate})} \right\rceil
 \end{align*}
 
@@ -235,7 +238,7 @@ Quanto ao número de soluções testadas, a partir da Fig. \ref{fig:sols_sateste
 
 \section{Algoritmo Guloso Aleatório}
 
-Por fim, o terceiro algoritmo a ser implementado foi um algoritmo guloso aleatório, que segue uma heurística baseada numa abordagem gulosa, não garantido encontrar a solução ótima. Este algoritmo itera sobre todos os vértices do grafo e, para cada vértice, troca a sua partição, verificando se a nova configuração melhora a solução atual. Caso o peso do corte com o vértice na partição oposta seja maior que o atual, a solução é atualizada. O processo continua até que uma iteração completa seja realizada sem encontrar melhorias, momento em que o algoritmo termina.
+Por fim, o terceiro algoritmo a ser implementado foi um algoritmo Guloso Aleatório, que segue uma heurística baseada numa abordagem gulosa, não garantido encontrar a solução ótima. Este algoritmo itera sobre todos os vértices do grafo e, para cada vértice, troca a sua partição, verificando se a nova configuração melhora a solução atual. Caso o peso do corte com o vértice na partição oposta seja maior que o atual, a solução é atualizada. O processo continua até que uma iteração completa seja realizada sem encontrar melhorias, momento em que o algoritmo termina.
 
 Devido ao critério de paragem do algoritmo, este pode correr indefinidamente devido à natureza aleatória da solução inicial, que pode estar a um grande número de iterações da solução estável que o algoritmo procura. Por isso, é adicionado um fator de ajuste do máximo de iterações (\textit{itLim}) ao algoritmo, tornando o número máximo de iterações do mesmo $m \times itLim$.
 
@@ -354,7 +357,6 @@ Quanto à análise do tempo de execução de cada algoritmo, esta métrica por s
 
 Atendendo aos algoritmos abordados ao longo deste relatório, todos eles foram implementados sob as condições mais homogéneas possíveis, de modo a garantir a igualdade de condições de execução. Quanto ao \textit{hardware} usado, o mesmo manteve-se constante, sendo que todas as execuções foram realizadas num \textit{MacBook Air}, com um processador \textit{Apple M1} e 16GB de memória RAM.
 
-Através da análise da Fig. \ref{fig:time_all}, que apresenta o tempo de execução para um exemplo de cada algoritmo, para não sobrecarregar tanto a análise, em função do número de vértices do grafo, é possível verificar certas \textit{irregularidades} nas \textit{curvas} formadas pelos pontos referentes a cada um dos algoritmos.
 
 \begin{figure}[H]
     \centering
@@ -362,6 +364,8 @@ Através da análise da Fig. \ref{fig:time_all}, que apresenta o tempo de execu�
     \caption{Tempo de execução, em segundos, dos diferentes algoritmos em função do número de vértices do grafo.}
     \label{fig:time_all}
 \end{figure}
+
+Através da análise da Fig. \ref{fig:time_all}, que apresenta o tempo de execução para um exemplo de cada algoritmo, para não sobrecarregar tanto a análise, em função do número de vértices do grafo, é possível verificar certas \textit{irregularidades} nas \textit{curvas} formadas pelos pontos referentes a cada um dos algoritmos.
 
 No caso do algoritmo de Corte Aleatório (pontos laranja), os menores tempos de execução observados para grafos com número reduzido de vértices, podem ser explicados pelo facto do algoritmo não atingir o número máximo de soluções a gerar, por atingir todas as soluções possíveis, previamente.
 
