@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.20)  2 DEC 2024 10:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.20)  2 DEC 2024 10:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -664,14 +664,11 @@ Underfull \hbox (badness 10000) detected at line 283
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 <../assets/ops_Random Greedy.png, id=49, 361.35pt x 289.08pt>
 File: ../assets/ops_Random Greedy.png Graphic file (type png)
 <use ../assets/ops_Random Greedy.png>
-Package pdftex.def Info: ../assets/ops_Random Greedy.png  used on input line 292.
+Package pdftex.def Info: ../assets/ops_Random Greedy.png  used on input line 294.
 (pdftex.def)             Requested size: 222.78355pt x 178.22644pt.
 
 
@@ -679,67 +676,51 @@ Package pdftex.def Info: ../assets/ops_Random Greedy.png  used on input line 292
 <../assets/sols_Random Greedy.png, id=54, 361.35pt x 289.08pt>
 File: ../assets/sols_Random Greedy.png Graphic file (type png)
 <use ../assets/sols_Random Greedy.png>
-Package pdftex.def Info: ../assets/sols_Random Greedy.png  used on input line 309.
+Package pdftex.def Info: ../assets/sols_Random Greedy.png  used on input line 311.
 (pdftex.def)             Requested size: 222.78355pt x 178.22644pt.
 
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 320--321
+Underfull \hbox (badness 1394) in paragraph at lines 322--323
 \OT1/cmr/m/n/10 a m^^Sedia para as di-fe-ren-tes m^^Setricas (n^^Sumero de
  []
 
 
 
-[6 <../assets/sols_Random Greedy.png>]
-<../assets/basicops.png, id=59, 361.35pt x 289.08pt>
+<../assets/basicops.png, id=55, 361.35pt x 289.08pt>
 File: ../assets/basicops.png Graphic file (type png)
 <use ../assets/basicops.png>
 Package pdftex.def Info: ../assets/basicops.png  used on input line 349.
 (pdftex.def)             Requested size: 222.78355pt x 178.22644pt.
 
-Underfull \hbox (badness 1117) in paragraph at lines 358--359
+
+[6 <../assets/sols_Random Greedy.png> <../assets/basicops.png>]
+Underfull \hbox (badness 1117) in paragraph at lines 362--363
 \OT1/cmr/m/n/10 re-lat^^Sorio, to-dos eles fo-ram im-ple-men-ta-dos sob as
  []
 
-<../assets/time_all.png, id=60, 361.35pt x 289.08pt>
+<../assets/time_all.png, id=61, 361.35pt x 289.08pt>
 File: ../assets/time_all.png Graphic file (type png)
 <use ../assets/time_all.png>
-Package pdftex.def Info: ../assets/time_all.png  used on input line 363.
+Package pdftex.def Info: ../assets/time_all.png  used on input line 367.
 (pdftex.def)             Requested size: 222.78355pt x 178.22644pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-<../assets/time_interval.png, id=61, 361.35pt x 289.08pt>
+<../assets/time_interval.png, id=62, 361.35pt x 289.08pt>
 File: ../assets/time_interval.png Graphic file (type png)
 <use ../assets/time_interval.png>
-Package pdftex.def Info: ../assets/time_interval.png  used on input line 379.
+Package pdftex.def Info: ../assets/time_interval.png  used on input line 383.
 (pdftex.def)             Requested size: 222.78355pt x 178.22644pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-[7 <../assets/basicops.png> <../assets/time_all.png>]
-Overfull \hbox (0.62042pt too wide) in paragraph at lines 400--418
+[7 <../assets/time_all.png> <../assets/time_interval.png>]
+Overfull \hbox (0.62042pt too wide) in paragraph at lines 404--422
  [][] 
  []
 
 
-Underfull \vbox (badness 7151) has occurred while \output is active []
 
+(./report.bbl)
 
-
-
-
-[8 <../assets/time_interval.png>] (./report.bbl)
-
-
-
-[9
-
-] (./report.aux)
+[8] (./report.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
@@ -754,10 +735,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  57i,14n,66p,1200b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on report.pdf (9 pages, 10400076 bytes).
+Output written on report.pdf (8 pages, 10399622 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 159 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

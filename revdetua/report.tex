@@ -242,7 +242,7 @@ Por fim, o terceiro algoritmo a ser implementado foi um algoritmo Guloso Aleató
 
 Devido ao critério de paragem do algoritmo, este pode correr indefinidamente dado a natureza aleatória da solução inicial, que pode estar a um grande número de iterações da solução estável que o algoritmo procura. Por isso, é adicionado um fator de ajuste do máximo de iterações (\textit{itLim}) ao algoritmo, tornando o número máximo de iterações do mesmo $m \times itLim$.
 
-É também importante referir que, pelo facto da única componente aleatória deste algoritmo ser a criação de uma solução inicial, e como todas as iterações realizam alterações em direção à melhor solução, o algoritmo nunca irá testar a mesma solução mais que uma vez, pelo que manter um registo sobre as soluções já testadas não é necessário. Pela mesma razão, o algoritmo é sensível à solução inicial, pelo que será interessante executar o algoritmo várias vezes, de modo a cobrir uma maior área do espaço de soluções, garantido uma maior probabilidade de encontrar uma solução próxima da ótima, ou até a própria.
+
 
 Este algoritmo pode ser representado em pseudocódigo da seguinte forma:
 
@@ -285,12 +285,14 @@ Este algoritmo pode ser representado em pseudocódigo da seguinte forma:
 \end{algorithmic}
 \end{algorithm}
 
-Através da análise do pseudocódigo é possível analisar a complexidade do algoritmo. Pelo facto das operações mais custosas serem percorrer todos os vértices ($O(n)$) e calcular o novo peso do corte, ao mudar o vértice de partição ($O(m)$), e ambas se encontrarem dentro do ciclo principal, que itera no máximo $m \times \texttt{itLim}$ vezes, a complexidade final do algoritmo é dada por $O(m \times \texttt{itLim} \times n \times m)$. Esta complexidade pode ser reescrita e simplificada de diferentes maneiras, entre elas $O(m^2 \times n)$, visto que \texttt{itLim} é uma constante.
+É também importante referir que, pelo facto da única componente aleatória deste algoritmo ser a criação de uma solução inicial, e como todas as iterações realizam alterações em direção à melhor solução, o algoritmo nunca irá testar a mesma solução mais que uma vez, pelo que manter um registo sobre as soluções já testadas não é necessário. Pela mesma razão, o algoritmo é sensível à solução inicial, pelo que será interessante executar o algoritmo várias vezes, de modo a cobrir uma maior área do espaço de soluções, garantido uma maior probabilidade de encontrar uma solução próxima da ótima, ou até a própria.
+
+Quanto à complexidade deste algoritmo, através da análise do pseudocódigo é possível verificar que, pelo facto das operações mais custosas serem percorrer todos os vértices ($O(n)$) e calcular o novo peso do corte, ao mudar o vértice de partição ($O(m)$), e ambas se encontrarem dentro do ciclo principal, que itera no máximo $m \times \texttt{itLim}$ vezes, a complexidade deste algoritmo é dada por $O(m \times \texttt{itLim} \times n \times m)$. Esta pode ser reescrita e simplificada de diferentes maneiras, entre elas $O(m^2 \times n)$, visto que \texttt{itLim} é uma constante.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/ops_Random Greedy.png}
-    \caption{Número de operações básicas efetuadas pelo algoritmo Guloso Aleatório em função do número de arestas do grafo, para diferentes valores de \texttt{itLim} (IT).}
+    \caption{Número de operações básicas efetuadas pelo algoritmo Guloso Aleatório em função do número de arestas, para diferentes valores de \texttt{itLim} (IT).}
     \label{fig:random_greedy}
 \end{figure}
 
@@ -342,14 +344,16 @@ Guloso Aleatório & $O(m^2 \times n)$ \\
 \end{tabular}
 \end{table}
 
-Tendo em conta que para grafos de maiores dimensões, com elevado número de arestas, a relação entre $n$ e $m$ é dada por $n^2 \approx m$, torna-se possível realizar a visualização apresentada na Fig. \ref{fig:total_ops_per_alg}. Pode-se verificar a ordem pela qual os algoritmos se tornam impraticáveis devido ao seu elevado número de operações, sendo a Pesquisa Exaustiva (PE) o primeiro a tornar-se impraticável, seguido do Guloso Aleatório (GA), Pesquisa Gulosa (PG) e, por fim, o Corte Aleatório (CA) e o Simulated Annealing (SA), com igual complexidade. Apesar desta análise ser possível através da Tabela \ref{table:numops}, a visualização gráfica permite uma melhor compreensão da complexidade dos algoritmos.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{../assets/basicops.png}
     \caption{Número total de operações básicas realizadas pelos diferentes algoritmos, em função do número de vértices do grafo. A legenda apresentada indica as iniciais dos algoritmos.}
     \label{fig:total_ops_per_alg}
 \end{figure}
+
+Tendo em conta que para grafos de maiores dimensões, com elevado número de arestas, a relação entre $n$ e $m$ é dada por $n^2 \approx m$, torna-se possível realizar a visualização apresentada na Fig. \ref{fig:total_ops_per_alg}. Pode-se verificar a ordem pela qual os algoritmos se tornam impraticáveis devido ao seu elevado número de operações, sendo a Pesquisa Exaustiva (PE) o primeiro a tornar-se impraticável, seguido do Guloso Aleatório (GA), Pesquisa Gulosa (PG) e, por fim, o Corte Aleatório (CA) e o Simulated Annealing (SA), com igual complexidade. Apesar desta análise ser possível através da Tabela \ref{table:numops}, a visualização gráfica permite uma melhor compreensão da complexidade dos algoritmos.
+
+
 
 \subsection{Análise do Tempo de Execução}
 
