@@ -40,7 +40,7 @@
 \maketitle
 
 \begin{abstract}
-This report presents the implementation and comparison of three randomized algorithms to solve the Maximum Weight Cut problem: a random cut algorithm, a Simulated Annealing algorithm, and a random greedy algorithm. The problem consists of dividing a graph into two complementary subsets in order to maximize the sum of the weights of the edges connecting the two subsets. The analysis of the algorithms was performed based on different metrics, such as the number of basic operations, execution time, and the accuracy of the solutions obtained, on graphs of varying sizes. The results show a balance between computational complexity and solution quality, indicating that the choice of the most suitable algorithm depends on the specific characteristics of each problem.
+This report presents the implementation and comparison of three randomized algorithms to solve the Maximum Weight Cut problem: a random cut algorithm, a simulated annealing algorithm, and a random greedy algorithm. The problem consists of dividing a graph into two complementary subsets in order to maximize the sum of the weights of the edges connecting the two subsets. The analysis of the algorithms was performed based on different metrics, such as the number of basic operations, execution time, and the accuracy of the solutions obtained, on graphs of varying sizes. The results show a balance between computational complexity and solution quality, indicating that the choice of the most suitable algorithm depends on the specific characteristics of each problem.
 \end{abstract}
 
 \begin{resumo}
@@ -54,7 +54,7 @@ O problema \textit{Maximum Weight Cut} é um problema de otimização, que tem c
 
 No passado relatório foram analisados algoritmos determinísticos para resolver o problema \textit{Maximum Weight Cut}, nomeadamente a Pesquisa Exaustiva e a heurística gulosa. Neste relatório, serão analisados novos algoritmos com um certo grau de aleatoriedade, com o objetivo de encontrar um algoritmo que otimize o equilíbrio entre a complexidade computacional e a qualidade da solução obtida. Os algoritmos a serem analisados são o algoritmo de Corte Aleatório, o algoritmo de \textit{Simulated Annealing} e o algoritmo Guloso Aleatório.
 
-Para além disso, será também analisada a complexidade de cada algoritmo, o número de operações básicas realizadas, o tempo de execução, o número de soluções testadas e a precisão das soluções obtidas, com o intuito de comparar os diferentes algoritmos e determinar o mais eficiente e eficaz para resolver o problema em questão. Os resultados alcançados com estes novos algoritmos, serão também comparados com os resultados obtidos com os algoritmos determinísticos, analisados no relatório anterior.
+Para além disso, será também analisada a complexidade de cada algoritmo, o número de operações básicas realizadas, o tempo de execução, o número de soluções testadas e a precisão das soluções obtidas, com o intuito de comparar os diferentes algoritmos e determinar o mais eficiente e eficaz na resolução do problema em questão. Os resultados alcançados com estes novos algoritmos, serão também comparados com os resultados obtidos com os algoritmos determinísticos, analisados no relatório anterior.
 
 \begin{figure}[H]
     \centering
@@ -79,11 +79,11 @@ Este é um algoritmo computacionalmente leve, pela sua simplicidade, mas não ga
 
 $$1 - \left( 1 - \frac{1}{2^{n-1}} \right)^{solutions}$$
 
-\noindent onde $n$ é o número de vértices e $solutions$ é o número de soluções a gerar. Pode-se facilmente verificar que, para grafos de grandes dimensões, esta probabilidade decresce exponencialmente, tornando o algoritmo cada vez menos preciso.
+\noindent onde $n$ corresponde ao número de vértices e $solutions$ ao número de soluções a gerar. Pode-se facilmente verificar que, para grafos de grandes dimensões, esta probabilidade decresce exponencialmente, tornando o algoritmo cada vez menos preciso.
 
-Pelo facto do algoritmo gerar muitas soluções aleatórias, é importante garantir que não existem soluções repetidas a ser testadas, evitando o cálculo do peso do corte, uma operação computacionalmente cara. Para isso foi criado um \textit{set} onde são guardadas as soluções já testadas, e cada vez que uma solução é gerada, a mesma só será testada depois de ser verificado que não é uma repetição.
+Pelo facto do algoritmo gerar muitas soluções aleatórias, é importante garantir que não existem soluções repetidas a serem testadas, evitando o cálculo do peso do corte, uma operação computacionalmente cara. Para isso foi criado um \textit{set} onde são guardadas as soluções já testadas, e cada vez que uma solução é gerada, a mesma só será testada depois de ser verificado que não é uma repetição.
 
-Atendendo à paragem do algoritmo, este tem dois critérios de paragem, parando assim que um deles é verificado. O primeiro, e mais provável em grafos de grandes dimensões, é quando o número de soluções geradas atinge o limite, definido pelo utilizador. O segundo critério, é verificado quando todas as soluções possíveis são testadas, ou seja, quando o \textit{set} que acompanha as soluções testadas contém $2^n$ elementos.
+Atendendo à paragem do algoritmo, este tem dois critérios de paragem, interrompendo o processo assim que um deles é verificado. O primeiro, e mais provável em grafos de grandes dimensões, é quando o número de soluções geradas atinge o limite, definido pelo utilizador. O segundo critério, é verificado quando todas as soluções possíveis são testadas, ou seja, quando o \textit{set} que acompanha as soluções testadas contém $2^n$ elementos.
 
 Este algoritmo pode ser então traduzido para o seguinte pseudocódigo:
 
@@ -129,7 +129,7 @@ Pode-se observar que a parte computacionalmente mais custosa deste algoritmo é 
 
 A complexidade referida é confirmada pela análise experimental apresentada na Fig. \ref{fig:random_ops}, onde se pode observar que o número de operações básicas realizadas é linear em relação ao número de arestas do grafo, para diferentes números de soluções geradas. Nesta figura as retas apresentadas são dadas pela função $$f(m) = m \times \text{MS}$$ onde MS é o número de soluções a gerar (\texttt{solutions}). Quanto aos pontos acima das retas que representam a complexidade do algoritmo, estes são devido ao facto de que para grafos de menores dimensões é possível que não se possa simplificar a complexidade para $O(m)$, visto que $n$ e $m$ são da mesma ordem de grandeza.
 
-Para além disso, também se pode reparar que o número de operações básicas realizadas é menor para um menor número de soluções geradas, o que é esperado, visto que o algoritmo realiza menos iterações.
+Além disso, também se pode observar que o número de operações básicas realizadas é menor para um menor número de soluções geradas, o que é esperado, visto que o algoritmo realiza menos iterações.
 
 \begin{figure}[H]
     \centering
@@ -240,7 +240,7 @@ Quanto ao número de soluções testadas, a partir da Fig. \ref{fig:sols_sateste
 
 Por fim, o terceiro algoritmo a ser implementado foi um algoritmo Guloso Aleatório, que segue uma heurística baseada numa abordagem gulosa, não garantido encontrar a solução ótima. Este algoritmo itera sobre todos os vértices do grafo e, para cada vértice, troca a sua partição, verificando se a nova configuração melhora a solução atual. Caso o peso do corte com o vértice na partição oposta seja maior que o atual, a solução é atualizada. O processo continua até que uma iteração completa seja realizada sem encontrar melhorias, momento em que o algoritmo termina.
 
-Devido ao critério de paragem do algoritmo, este pode correr indefinidamente devido à natureza aleatória da solução inicial, que pode estar a um grande número de iterações da solução estável que o algoritmo procura. Por isso, é adicionado um fator de ajuste do máximo de iterações (\textit{itLim}) ao algoritmo, tornando o número máximo de iterações do mesmo $m \times itLim$.
+Devido ao critério de paragem do algoritmo, este pode correr indefinidamente dado a natureza aleatória da solução inicial, que pode estar a um grande número de iterações da solução estável que o algoritmo procura. Por isso, é adicionado um fator de ajuste do máximo de iterações (\textit{itLim}) ao algoritmo, tornando o número máximo de iterações do mesmo $m \times itLim$.
 
 É também importante referir que, pelo facto da única componente aleatória deste algoritmo ser a criação de uma solução inicial, e como todas as iterações realizam alterações em direção à melhor solução, o algoritmo nunca irá testar a mesma solução mais que uma vez, pelo que manter um registo sobre as soluções já testadas não é necessário. Pela mesma razão, o algoritmo é sensível à solução inicial, pelo que será interessante executar o algoritmo várias vezes, de modo a cobrir uma maior área do espaço de soluções, garantido uma maior probabilidade de encontrar uma solução próxima da ótima, ou até a própria.
 
@@ -285,7 +285,7 @@ Este algoritmo pode ser representado em pseudocódigo da seguinte forma:
 \end{algorithmic}
 \end{algorithm}
 
-Através da análise do pseudocódigo é possível analisar a complexidade do algoritmo. Pelo facto das operações mais custosas serem o percorrer todos os vértices ($O(n)$) e calcular o novo peso do corte, ao mudar o vértice de partição ($O(m)$), e ambas se encontrarem dentro do ciclo principal, que itera no máximo $m \times \texttt{itLim}$ vezes, a complexidade final do algoritmo é dada por $O(m \times \texttt{itLim} \times n \times m)$. Esta complexidade pode ser reescrita e simplificada de diferentes maneiras, entre elas $O(m^2 \times n)$, visto que \texttt{itLim} é uma constante.
+Através da análise do pseudocódigo é possível analisar a complexidade do algoritmo. Pelo facto das operações mais custosas serem percorrer todos os vértices ($O(n)$) e calcular o novo peso do corte, ao mudar o vértice de partição ($O(m)$), e ambas se encontrarem dentro do ciclo principal, que itera no máximo $m \times \texttt{itLim}$ vezes, a complexidade final do algoritmo é dada por $O(m \times \texttt{itLim} \times n \times m)$. Esta complexidade pode ser reescrita e simplificada de diferentes maneiras, entre elas $O(m^2 \times n)$, visto que \texttt{itLim} é uma constante.
 
 \begin{figure}[H]
     \centering
@@ -313,9 +313,9 @@ Quanto ao número de soluções testadas, a partir da análise do pseudocódigo,
 
 \section{Análise dos Resultados}
 
-Após a implementação e execução dos algoritmos em estudo, torna-se possível a análise dos resultados obtidos, nomeadamente uma análise de complexidade entre todos os algoritmos, através do número de operações básicas realizadas, do tempo de execução dos algoritmos e das soluções obtidas. Para além da análise dos algoritmos em estudo neste relatório, também é feita uma comparação com os algoritmos determinísticos, analisados no relatório anterior, nomeadamente a Pesquisa Exaustiva e a Pesquisa Gulosa.
+Após a implementação e execução dos algoritmos em estudo, torna-se possível a análise dos resultados obtidos, nomeadamente uma análise de complexidade entre todos os algoritmos, através do número de operações básicas realizadas, do tempo de execução dos algoritmos e das soluções obtidas. Para além da análise dos algoritmos em estudo neste relatório, também é realizada uma comparação com os algoritmos determinísticos, analisados no relatório anterior, nomeadamente a Pesquisa Exaustiva e a Pesquisa Gulosa.
 
-Para esta análise, foram utlizados o conjunto de grafos gerados aleatoriamente com a semente $124348$, a que será chamado \textit{Gpeq}, por serem grafos de menores dimensões, e os grafos do conjunto \textit{Gset}. Entre os diferentes grafos, podem ser encontrados diversos números de vértices e densidades de arestas, garantindo a representação de uma ampla gama de configurações estruturais e cenários computacionais.
+Para esta análise, foram utilizados o conjunto de grafos gerados aleatoriamente com a semente $124348$, a que será chamado \textit{Gpeq}, por serem grafos de menores dimensões, e os grafos do conjunto \textit{Gset}. Entre os diferentes grafos, podem ser encontrados diversos números de vértices e densidades de arestas, garantindo a representação de uma ampla gama de configurações estruturais e cenários computacionais.
 
 Dada a componente aleatória dos algoritmos, para assegurar resultados mais precisos e consistentes, cada grafo foi processado múltiplas vezes, calculando-se a média para as diferentes métricas (número de operações básicas, precisão, etc.), com exceção do tempo de execução, para o qual foi calculado a mediana. A escolha da mediana para esta métrica deve-se à sua robustez contra valores atípicos que podem surgir devido à falta de controlo sobre o ambiente de execução dos algoritmos.
 
@@ -342,7 +342,7 @@ Guloso Aleatório & $O(m^2 \times n)$ \\
 \end{tabular}
 \end{table}
 
-Tendo em conta que para grafos de maiores dimensões, com elevado número de arestas, a relação entre $n$ e $m$ é dada por $n^2 \approx m$, torna-se possível realizar a visualização apresentada na Fig. \ref{fig:total_ops_per_alg}. Pode-se verificar a ordem pela qual os algoritmos se tornam impraticáveis devido ao seu elevado número de operações, sendo a Pesquisa Exaustiva (PE) o primeiro a tornar-se impraticável, seguido do Guloso Aleatório (GA), Pesquisa Gulosa (PG) e, por fim, o Corte Aleatório (CA) e o Simulated Annealing (SA), com igual complexidade. Apesar desta análise ser possível através da tabela, a visualização gráfica permite uma melhor compreensão da complexidade dos algoritmos.
+Tendo em conta que para grafos de maiores dimensões, com elevado número de arestas, a relação entre $n$ e $m$ é dada por $n^2 \approx m$, torna-se possível realizar a visualização apresentada na Fig. \ref{fig:total_ops_per_alg}. Pode-se verificar a ordem pela qual os algoritmos se tornam impraticáveis devido ao seu elevado número de operações, sendo a Pesquisa Exaustiva (PE) o primeiro a tornar-se impraticável, seguido do Guloso Aleatório (GA), Pesquisa Gulosa (PG) e, por fim, o Corte Aleatório (CA) e o Simulated Annealing (SA), com igual complexidade. Apesar desta análise ser possível através da Tabela \ref{table:numops}, a visualização gráfica permite uma melhor compreensão da complexidade dos algoritmos.
 
 \begin{figure}[H]
     \centering
@@ -353,7 +353,7 @@ Tendo em conta que para grafos de maiores dimensões, com elevado número de are
 
 \subsection{Análise do Tempo de Execução}
 
-Quanto à análise do tempo de execução de cada algoritmo, esta métrica por ser mais sensível a fatores externos, como a carga do sistema, não terá a comparação entre os algoritmos estudados neste relatório face aos estudados no relatório anterior, pelo facto da igualdade das condições de execução não serem garantidas.
+Quanto à análise do tempo de execução de cada algoritmo, esta métrica por ser mais sensível a fatores externos, como a carga do sistema, não terá a comparação entre os algoritmos estudados neste relatório face aos estudados no relatório anterior, pelo facto da igualdade das condições de execução não ser garantida.
 
 Atendendo aos algoritmos abordados ao longo deste relatório, todos eles foram implementados sob as condições mais homogéneas possíveis, de modo a garantir a igualdade de condições de execução. Quanto ao \textit{hardware} usado, o mesmo manteve-se constante, sendo que todas as execuções foram realizadas num \textit{MacBook Air}, com um processador \textit{Apple M1} e 16GB de memória RAM.
 
@@ -369,10 +369,10 @@ Através da análise da Fig. \ref{fig:time_all}, que apresenta o tempo de execu�
 
 No caso do algoritmo de Corte Aleatório (pontos laranja), os menores tempos de execução observados para grafos com número reduzido de vértices, podem ser explicados pelo facto do algoritmo não atingir o número máximo de soluções a gerar, por atingir todas as soluções possíveis, previamente.
 
-Quanto às \textit{irregularidades} observadas nos grafos de maiores dimensões, que pertencem ao conjunto \textit{Gset}, é possível que estejam relacionadas com a forma como é lido o ficheiro que contém o grafo, o que pode, de alguma maneira, impactar o desempenho do \textit{hardware} durante a execução do algoritmo ou com a densidade de arestas dos grafos.
+Quanto às \textit{irregularidades} observadas nos grafos de maiores dimensões, que pertencem ao conjunto \textit{Gset}, é possível que estejam relacionadas com a forma como é lido o ficheiro que contém o grafo, o que pode, de alguma forma, impactar o desempenho do \textit{hardware} durante a execução do algoritmo ou com a densidade de arestas dos grafos.
 
 
-Com o objetivo de ajustar a função que melhor descreve o comportamento do tempo de execução dos algoritmos, foi criado um intervalo para o número de vértices de modo a ignorar as \textit{irregularidades} observadas. Através da análise da Fig. \ref{fig:time_interval}, onde é feito esse ajuste, é possível, de forma não muito clara, devido à escala do eixos, verificar o comportamento polinomial dos tempos de execução dos algoritmos e que o grau polinomial do algoritmo Guloso Aleatório é superior ao dos restantes.
+Com o objetivo de ajustar a função que melhor descreve o comportamento do tempo de execução dos algoritmos, foi criado um intervalo para o número de vértices de modo a ignorar as \textit{irregularidades} observadas. Através da análise da Fig. \ref{fig:time_interval}, onde é realizado esse ajuste, é possível, de forma não muito clara, devido à escala do eixos, verificar o comportamento polinomial dos tempos de execução dos algoritmos e que o grau polinomial do algoritmo Guloso Aleatório é superior ao dos restantes.
 
 \begin{figure}[H]
     \centering
@@ -388,7 +388,7 @@ Ao ajustar diferentes funções polinomiais aos tempos de execução dos algorit
 
 Tendo em conta as soluções obtidas pelos diferentes algoritmos, torna-se interessante analisar a precisão das soluções, ou seja, comparar os resultados aproximados com as soluções ótimas (ou conhecidas) dos grafos em estudo. Para tal, foi calculada a precisão das soluções obtidas, em percentagem, em relação à solução ótima, para cada um dos algoritmos, e para cada grafo.
 
-De modo a discretizar o desempenho dos algoritmos em grafos de diferentes dimensões, foi calculada a média e desvio padrão das precisões do conjunto de grafos \textit{Gpeq} e \textit{Gset}, relembrando que os conjuntos contém os grafos de menores e maiores dimensões, respetivamente.
+De modo a discretizar o desempenho dos algoritmos em grafos de diferentes dimensões, foi calculada a média e desvio padrão das precisões do conjunto de grafos \textit{Gpeq} e \textit{Gset}, relembrando que os conjuntos contêm os grafos de menores e maiores dimensões, respetivamente.
 
 Na Tabela \ref{table:precision} pode-se verificar a média e o desvio padrão da precisão das soluções obtidas pelos diferentes algoritmos, para os diferentes conjuntos de grafos. É de notar que a Pesquisa Exaustiva não foi executada para os grafos do conjunto \textit{Gset}, devido ao elevado número de operações básicas que o algoritmo executa, tornando-se impraticável para grafos de maiores dimensões. Os algoritmos que não completaram a execução para todos os grafos de um derminado conjunto, devido ao tempo de execução elevado, foram assinalados com um asterisco ($^*$).
 
@@ -419,7 +419,7 @@ Gul. Aleat. (IT: 2) & $96\% \ (3.7)$ & $88\% \ (8.4)^*$ \\
 
 Pode-se verificar que, de uma forma geral, todos os algoritmos apresentam uma precisão elevada para os grafos do conjunto \textit{Gpeq}, o que não é muito interessante, visto que para grafos deste conjunto, a Pesquisa Exaustiva não tem grandes problemas de eficiência e garante a solução ótima.
 
-Por outro lado, para os grafos do conjunto \textit{Gset}, a Pesquisa Exaustiva torna-se impraticável, pelo que a precisão dos restantes algoritmos é mais relevante. Observa-se que o algoritmo Guloso Aleatório é aquele que apresenta melhores resultados para este conjunto, mas pelo facto de não ter completado a execução para todos os grafos, devido ao tempo de execução elevado, reforça a importância do equilíbrio entre a precisão e a complexidade do algoritmo. O segundo algoritmo em destaque é a Pesquisa Gulosa, que por sua vez, é o algoritmo com maior complexidade, excluindo a Pesquisa Exaustiva e o Guloso Aleatório.
+Por outro lado, para os grafos do conjunto \textit{Gset}, a Pesquisa Exaustiva torna-se impraticável, pelo que a precisão dos restantes algoritmos é mais relevante. Observa-se que o algoritmo Guloso Aleatório é aquele que apresenta melhores resultados para este conjunto, mas o facto de não ter completado a execução para todos os grafos, devido ao tempo de execução elevado, reforça a importância do equilíbrio entre a precisão e a complexidade do algoritmo. O segundo algoritmo em destaque é a Pesquisa Gulosa, que por sua vez, é o algoritmo com maior complexidade, excluindo a Pesquisa Exaustiva e o Guloso Aleatório.
 
 É interessante observar que, para o conjunto de grafos \textit{Gset}, a ordem de precisão dos algoritmos é a mesma que a ordem de complexidade, reforçando mais uma vez, a existência de um equilíbrio entre a precisão e a eficiência computacional dos algoritmos.
 
@@ -429,7 +429,7 @@ Em suma, pode-se apurar que existem diversos algoritmos para a resolução do pr
 
 Através da análise dos resultados obtidos com a implementação das diferentes abordagens, foi possível verificar que há um equilíbrio entre a precisão e a eficiência computacional dos algoritmos. Enquanto que algoritmos como a Pesquisa Exaustiva e o Guloso Aleatório apresentam uma precisão elevada, são algoritmos com uma complexidade elevada, tornando-se impraticáveis para grafos de maiores dimensões. Por outro lado, algoritmos como o Corte Aleatório e o \textit{Simulated Annealing} apresentam uma precisão mais baixa, mas com uma complexidade correspondente, tornando-se mais eficientes para grafos de maiores dimensões.
 
-Isto revela a importância de escolher o algoritmo mais adequado para o problema em questão, tendo em conta as suas características, como o número de vértices e arestas do grafo, o tempo disponível para a execução do algoritmo e a precisão desejada para a solução.
+Isto revela a importância de escolher o algoritmo mais adequado para o problema em questão, tendo em conta as suas características, como o número de vértices e arestas do grafo, o tempo disponível para a execução do algoritmo e a precisão desejada para a solução obtida.
 
 \bibliography{refs}
 
